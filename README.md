@@ -2,8 +2,14 @@
 Site para adoção de animais
 
 
-# Para Salvar alterações :
+# Verificar os arquivos alterados
+git status
 
+# Adicionar todos os arquivos modificados
 git add .
-git commit -m "mensagem"
+
+# Criar um commit com uma mensagem descritiva
+git commit -m "Descreva aqui o que você alterou"
+
+# Enviar para o repositório remoto (GitHub)
 git push origin main
