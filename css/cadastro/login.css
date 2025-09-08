@@ -1,0 +1,24 @@
+p a {
+    color: rgb(250, 181, 91);
+    background-color: transparent;
+}
+
+.btnVoltar{
+    color: white;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 6px;         
+    margin-top: 24px;  
+    justify-content: center; 
+}
+
+form button,
+.botoes button {
+    padding: 14px 32px;   
+    font-size: 1.1rem;    
+    min-width: 140px;     
+    border-radius: 8px;   
+}

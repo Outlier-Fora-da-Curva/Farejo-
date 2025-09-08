@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* opcional */
+    margin: 0 auto;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.cadastro-header {
+    width: 100%;
+    max-width: 320px; /* igual à largura do título */
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Lado esquerdo */
+.left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Topo e base */
+    align-items: center;
+    text-align: center;
+}
+
+.left h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.left p {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.dog-img {
+    width: 400px;  
+}
+
+/* Lado direito */
+.right {
+    flex: 1;
+    padding: 60px 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.right h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Indicador de etapa */
+
+.hidden {
+  display: none;
+}
+
+.step-indicator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #331802;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.step:not(.active) {
+    background-color: #e0e0e0;
+    color: #5c2c00;
+}
+
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #f5c293;
+    margin: 0 10px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    display: block;
+}
+
+form input {
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    color: white;
+}
+
+form button {
+    background: #fff;
+    color: #000;
+    transition: background 0.2s, color 0.2s;margin-top: 20px;
+    padding: 12px;
+    background-color: #DFA575;
+    border: none;
+    border-radius: 19px;
+    color: #613104;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button {
+    display: block;
+    margin: 0 auto;
+}
+
+form a {
+    margin-top: 30px;
+    padding: 12px;
+    background-color: #DFA575;
+    border: none;
+    border-radius: 10px;
+    color: #613104;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+
+
+form button:hover {
+    background-color: #c76718;
+    color: white;
+}
+
+form button a:hover {
+    background-color: #c7671800;
+    color: white;
+}
+
+
+form input:focus {
+    background: #fff;
+    color: #000;
+    outline: 2px solid #c76d07; /* opcional: borda de destaque */
+    transition: background 0.2s, color 0.2s;
+}
+
+form input:focus,
+form input:not(:placeholder-shown) {
+    background: #fff;
+    color: #000;
+    outline: 2px solid #c76d07;
+    transition: background 0.2s, color 0.2s;
+}
