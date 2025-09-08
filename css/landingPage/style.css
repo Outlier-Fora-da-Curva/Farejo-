@@ -16,7 +16,7 @@ body {
 
 /* Navbar */
 header {
-    background: #E2AC7F;
+    background: #ff4; /* #E2AC7F */
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -66,4 +66,5 @@ nav a:hover {
     background: #903500; 
     transform: scale(1.05); 
 }
+
 
