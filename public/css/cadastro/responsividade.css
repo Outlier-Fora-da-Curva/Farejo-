@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+
+    html{
+    background: linear-gradient(135deg, #f8a240, #5a2301);
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .dog-img { 
+        display: none;
+    }
+    
+
+    .left {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dog-img {
+        width: 300px;
+    }
+
+    .right {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .step-indicator {
+        flex-direction: row;
+    }
+
+    .step {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1254px) {
+
+    html{
+    background: linear-gradient(135deg, #f8a240, #5a2301);
+    }
+}
