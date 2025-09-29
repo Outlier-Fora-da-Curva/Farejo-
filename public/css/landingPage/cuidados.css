@@ -1,0 +1,75 @@
+/* Secao Cuidados */
+.secaoCuidados {
+  font-family: 'Oswald';
+  text-align: center;
+  padding: 40px 20px;
+  color: #663e17;
+}
+
+.secaoCuidados h1 {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: 'Titan One';
+  text-transform: uppercase;
+  color: #903500;
+  margin-bottom: 30px;
+}
+
+.cardsCuidados {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 440px;
+  background: linear-gradient(180deg, #f7c392, #c65c1a);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: left;
+  color: #4b2a06;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-family: 'Titan One';
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Oswald';
+  margin-bottom: 40px;
+}
+
+.btnCard {
+  background: #663e17;
+  color: #E2AC7F;
+  font-family: 'Titan One';
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btnCard:hover {
+  background: #75481b;
+}
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 180px;
+}
+
+
+
+
+

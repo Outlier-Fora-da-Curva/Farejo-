@@ -1,0 +1,41 @@
+/* Container de 3 colunas */
+.colunaPerfis {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Cada coluna */
+.colunaPerfil {
+    flex: 1;
+    /* todas ocupam o mesmo espaço */
+    padding: 0 20px;
+    /* espaço interno para a linha não encostar no conteúdo */
+    border-right: 2px solid #ac3f01;
+    /* linha cinza */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* remove a borda da última coluna */
+.colunaPerfil:last-child {
+    border-right: none;
+}
+
+#inativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 80px;
+    height: 30px;
+    background-color: #ee9c9c;
+    color: #022f10;
+    border: 1px solid #022f10;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: none;
+}

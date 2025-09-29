@@ -1,0 +1,749 @@
+/* Responsividade */
+@media (max-width: 1250px) {
+/* inicio, navbarOpcoes*/
+}
+
+@media (max-width: 1250) {
+/* navbarOpcoes*/
+}
+
+/* Tablets */
+@media (max-width: 1100px) {
+    /* Início */
+    .fundoInicio {
+        height: 90vh;
+    }
+
+    /* Pegadas do início */
+    .pata {
+        width: 60px;
+    }
+
+    .pata3 {
+        width: 60px;
+    }
+
+    .pata4 {
+        width: 160px;
+    }
+
+    /* Onda */
+    #wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(../img/onda.png);
+        background-size: 100% 100px;
+    }
+
+    /* Círculo com imagem do cachorro */
+    .cachorroInicio {
+        width: 380px;
+        height: 380px;
+        right: -45px;
+    }
+
+    /* Titulos */
+    .tituloLand {
+        font-size: 30px;
+    }
+
+    .subtituloLand {
+        font-size: 10px;
+    }
+
+    .infoLand {
+        width: 44%;                    
+        padding: 4% 0;               
+        margin-left: 14%;
+    }
+
+    /********************************************/
+    /* Problemas */
+    .pequeno {
+        display: none;
+    }
+
+    /* Solução */
+    .subtituloSolucao {
+        font-size: 16px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .cardS {
+        border-radius: 20px;        
+        max-width: 225px; 
+        font-size: 12px;
+        font-family: "Oswald", sans-serif;
+        padding: 20px 11px;
+        margin-top: 3%;
+    }
+
+
+    .cardS .imgSol {
+        border-radius: 20px;
+        width: 160px;
+        height: 120px;
+        z-index: 1;
+        margin-top: -60px;
+        box-shadow: 4px 4px 6px #29180ad2;
+        border: solid 1.5px #000;
+        
+    }
+
+    .cardSol-wrapper {
+        max-width: 991px;
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    .cardSol-wrapper .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+    }
+
+    /********************************************************************************/
+    /* Impactos */
+    .secaoImpactos {
+        padding: 10px;
+        max-width: 680px;
+        margin: 40px auto;
+    }
+
+    .tituloImpacto {
+        font-size: 1.6rem;
+    }
+
+    .subtituloImpacto {
+        font-size: 1.3rem;
+        margin: 15px;
+    }
+    
+    .cardImpacto img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .cardImpacto .numeroImpacto {
+        font-size: 1.6rem;
+    }
+
+    .cardImpacto span {
+        margin-top: -15px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+
+    /********************************************************************************/
+    /* CTA */
+    #tituloCta {
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .subtituloLand {
+        font-size: 0.9rem;
+    }
+
+    .cta {
+        padding: 40px;             
+    }
+
+    /* botão */
+    .btnLand {
+        font-size: 1rem;
+        padding: 10px 25px;
+        margin-top: 2%;
+    }
+
+    .infoCta {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+    /************************************************************************/
+    /* Passos */
+    .imgTutorial {
+        display: none !important;
+    }
+
+    /* Ajustes do filtro (botões) */
+    .auxFiltro {
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .filtro {
+        width: 95%;
+        margin: 12px auto;
+        gap: 10px;
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+
+    .filtro button {
+        min-width: 140px;
+        flex: 1 1 auto;
+    }
+
+    /* Timeline e passos lado a lado (linha vertical à esquerda, cards à direita) */
+    .timeline-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 300px;
+        width: 100%;
+        padding: 20px 8px;
+        padding-top: 90px;
+    }
+
+
+    .controles-verticais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        min-width: 30px;
+        flex: 0 0 auto;
+    }
+
+    .timeline {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 8px;               
+        min-height: 206px;
+        background-color: transparent;
+        padding: 8px 0;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 6px;
+        bottom: 6px;
+        width: 4px;
+        background-color: #706f6f;
+        border-radius: 4px;
+        z-index: 0;
+    }
+
+    /* Bolinhas sobre a linha */
+    .bolinha {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #706f6f;
+        z-index: 2;
+        margin: 0;
+        transition: all 0.25s ease;
+    }
+    
+    .bolinha.ativo {
+        width: 24px;
+        height: 24px;
+        background: #AF620C;
+    }
+
+    .passos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        justify-content: center;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;   
+        position: relative;  
+        
+    }
+
+    .passo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        transition: transform 0.3s ease;
+    }
+
+    .passo.ativo {
+        opacity: 1;
+        max-height: 800px;
+        padding: 14px;
+    }
+
+    .passos {
+        flex: 1 1 auto;
+        width: calc(100% - 120px);
+        max-width: 800px;
+        margin: 0;
+    }
+
+
+    .passo.proximo,
+    .passo.anterior {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    /* Ajustes de tipografia */
+    .passoNumero { width: 48px; height: 48px; font-size: 28px; }
+    .passoSup h3 { font-size: 18px; }
+    .passo p { font-size: 15px; }
+    .prev, .next { margin: 0; }
+}
+
+
+/*************************************************************************/
+/* Celulares */
+
+/* Responsividade para celular (até 768px) */
+@media (max-width: 780px) {
+    .passos {
+        width: 90%;
+    }
+
+    .passo {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* impede barra de rolagem horizontal */
+    }
+
+    /* Início */
+    .fundoInicio {    
+        width: 100%;
+        height: 85vh;
+    }
+
+    /* Pegadas do início */
+    .pata {
+        position: absolute;
+        width: 70px;
+        opacity: 0.95;
+        transform-origin: center;
+    }
+
+    .pata1 {
+        visibility: hidden;
+    }
+
+    .pata2 {
+        top: 40px;
+        right: 200px;
+        transform: rotate(-15deg);
+        z-index: -1;
+    }
+
+    .pata3 {
+        width: 80px;
+        bottom: 100px;
+        left: 60%;
+        transform: rotate(10deg);
+    }
+
+    .pata4 {
+        width: 180px;
+        bottom: 100px;
+        left: 0;
+    }
+
+    /* Círculo com imagem do cachorro */
+    .cachorroInicio {
+        display: none; 
+    }
+
+    /* Títulos */
+    .tituloLand {
+        font-family: "Titan One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #7B3C0A;
+        text-align: center;  /* centralizei no celular */
+        font-size: 25px;
+        text-shadow: 2px 2px 4px #95633ad2;
+    }
+
+    .subtituloLand {
+        color: #fff;
+        font-size: 20px;
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+    }
+
+    #subLand1 {
+        width: 90%;  /* mais largo no celular */
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    nav img {
+        height: 45px;
+        padding-left: 10px;
+    }
+
+    .infoLand {
+        width: 80%;                 
+        display: flex;               
+        flex-direction: column;      
+        align-items: center;       
+        justify-content: center;    
+        padding: 5% 0;               
+        text-align: center; 
+        margin: 0 auto;
+    }
+
+    .timeline-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 80%;
+        width: 100%;
+        padding: 20px 8px;
+        padding-top: 90px;
+    }
+
+    .passos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 200px; /* largura do card */
+        position: relative;
+    }
+
+
+    .btnLand a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #titInicioLand {
+        text-align: center;
+    }
+
+    /***********************************************************************/
+    /* Problemas */
+    .pequeno, .grande {
+        display: none;
+    }
+
+    .contP1 {
+        width: 80%;
+    }
+
+    /* Solução */
+    .subtituloSolucao {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .cardS {
+        border-radius: 20px;        
+        max-width: 350px; 
+        font-size: 12px;
+        font-family: "Oswald", sans-serif;
+        padding: 20px 11px;
+        margin-top: 3%;
+    }
+
+
+    .cardS .imgSol {
+        border-radius: 20px;
+        width: 160px;
+        height: 120px;
+        z-index: 1;
+        margin-top: -60px;
+        box-shadow: 4px 4px 6px #29180ad2;
+        border: solid 1.5px #000;
+            
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #e2bea1;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .cardSol-wrapper {
+        max-width: 991px;
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    .cardSol-wrapper .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+    }
+
+    /********************************************************************************/
+    /* Impactos */
+    .secaoImpactos {
+        padding: 10px;
+        max-width: 600px;
+        margin: 40px auto;
+     }
+
+    .tituloImpacto {
+        font-size: 1.6rem;
+    }
+
+    .subtituloImpacto {
+        font-size: 1.3rem;
+        margin: 15px;
+    }
+        
+    .cardImpacto img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .cardImpacto .numeroImpacto {
+        font-size: 1.6rem;
+    }
+
+    .cardImpacto span {
+        margin-top: -15px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+
+    /********************************************************************************/
+    /* CTA */
+        #tituloCta {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .subtituloLand {
+            font-size: 0.7rem;
+        }
+
+        .cta {
+            padding: 40px; 
+            background-image: url("../img/gatoFundo.png");            
+        }
+
+        /* botão */
+        .btnLand {
+            font-size: 1rem;
+            padding: 10px 25px;
+            margin-top: 2%;
+        }
+
+        .infoCta {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            width: 60%;
+        }
+
+        /************************************************************************/
+        /* Passos */
+        .imgTutorial {
+            display: none !important;
+        }
+
+        /* Ajustes do filtro (botões) */
+        .auxFiltro {
+            margin-right: 5px;
+            margin-left: 5px;
+            width: 90%;
+            justify-content: center;
+        }
+
+        .filtro {
+            width: 95%;
+            margin: 12px auto;
+            gap: 10px;
+            padding: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filtro button {
+            min-width: 140px;
+            flex: 1 1 auto;
+        }
+
+        /* Timeline e passos lado a lado (linha vertical à esquerda, cards à direita) */
+        .timeline-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            width: 100%;
+            padding: 0 8px 24px;
+            padding-top: 90px;
+        }
+
+
+        .controles-verticais {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-width: 30px;
+            flex: 0 0 auto;
+        }
+
+        
+        .timeline-container {
+            gap: 20px; 
+            padding-left: 10px; 
+        }
+        
+
+        .timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            width: 8px;               
+            min-height: 206px;
+            background-color: transparent;
+            padding: 8px 0;
+            margin-left: 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 6px;
+            bottom: 6px;
+            width: 4px;
+            background-color: #706f6f;
+            border-radius: 4px;
+            z-index: 0;
+        }
+
+        /* Bolinhas sobre a linha */
+        .bolinha {
+            position: relative;
+            display: block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #706f6f;
+            z-index: 2;
+            margin: 0;
+            transition: all 0.25s ease;
+        }
+        
+        .bolinha.ativo {
+            width: 24px;
+            height: 24px;
+            background: #AF620C;
+        }
+
+        /* Área dos cards (passos) ocupa o restante do espaço */
+        .passos {
+            flex: 1 1 auto;
+            width: calc(100% - 120px);
+            max-width: 800px;
+            margin: 0;
+        }
+
+    /* Cards: trocar layout absoluto por empilhado (cada card ocupa linha) */
+    .passo {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.35s ease;
+    }
+
+    .passo.ativo {
+        opacity: 1 !important;
+        max-height: 800px;
+        padding: 14px;
+        overflow: visible;
+    }
+
+    .passo.proximo,
+    .passo.anterior {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    /* Ajustes de tipografia */
+    .passoNumero { width: 48px; height: 48px; font-size: 28px; }
+    .passoSup h3 { font-size: 18px; }
+    .passo p { font-size: 15px; }
+    .prev, .next { margin: 0; }
+}
+
+@media (max-width: 732px) {
+    /********************************************************************************/
+    /* Impactos */
+    .secaoImpactos {
+        padding: 10px;
+        max-width: 70%;
+        margin: 20px auto;
+     }
+
+    .tituloImpacto {
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    .subtituloImpacto {
+        font-size: 0.9rem;
+        margin: 25px;
+    }
+        
+    .cardImpacto img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .cardImpacto .numeroImpacto {
+        font-size: 0.7rem;
+    }
+
+    .cardImpacto span {
+        margin-top: -15px;
+        font-size: 0.4rem;
+        margin-bottom: 15px;
+    }
+}

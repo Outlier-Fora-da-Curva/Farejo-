@@ -1,0 +1,110 @@
+/* Funcionários */
+.card {
+    background: #f5f0e6;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 80%; 
+    border: 1px solid #8b5e34; 
+ 
+}
+
+
+.aprovacoes h3 {
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+}
+
+.aprovacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.aprovacao .perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Oswald", sans-serif;
+}
+
+.aprovacao img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.aprovacao .dados p {
+    margin: 2px 0;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.aprovacao .dados .nome {
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+}
+
+.acoes-aprovacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Oswald", sans-serif;
+}
+
+.acoes-aprovacao img {
+  width: 30px;
+  height: 30px;
+}
+
+.acoes-aprovacao button {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  border: 1.5px solid #542602;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botão Deletar */
+.btn-delete {
+  background: #b84343;
+}
+
+.btn-delete:hover {
+  background: #f03f6b;
+}
+
+/* Botão Aprovar */
+.btn-approve {
+  background: #43b85c;
+}
+
+.btn-approve:hover {
+  background: #36a44e;
+}
+
+
+#paraAdocao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    background-color: #f5cb95;
+    color: #022f10;
+    border: 1px solid #022f10;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: none;
+}

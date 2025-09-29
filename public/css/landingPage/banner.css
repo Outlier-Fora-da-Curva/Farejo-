@@ -1,0 +1,33 @@
+/* Banner */
+.banner {
+    background: url("../../imgs/landingPage/fundo.png") no-repeat center/cover;
+    height: 440px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 40px; 
+    color: white; 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner h1 { 
+    font-size: 50px; 
+    margin-bottom: 10px; 
+    font-family: 'Titan One', sans-serif;
+    color: #E3C4B2;
+}
+
+.banner p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+}
+
+
+#mensagemLogin{
+    font-size: 30px;
+    margin: 10px 0;
+    color:#9f4918;
+    font-family: 'Titan One';
+}

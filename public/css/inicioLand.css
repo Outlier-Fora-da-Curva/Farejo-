@@ -1,0 +1,578 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+/* Início */
+.fundoInicio {
+    position: relative;
+    height: 85vh;
+    background: #8D4F08;
+    background: linear-gradient(90deg,rgba(141, 79, 8, 1) 0%, rgba(205, 128, 41, 1) 50%, rgba(175, 98, 12, 1) 100%);
+    overflow: hidden;
+}
+
+/* Pegadas do início */
+.pegadas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pata {
+    position: absolute;
+    width: 70px;
+    opacity: 0.95;
+    transform-origin: center;
+}
+
+.pata1 {
+    top: 80px;
+    left: 80px;
+    transform: rotate(-20deg);
+}
+
+.pata2 {
+    top: 40px;
+    right: 200px;
+    transform: rotate(-15deg);
+}
+
+.pata3 {
+    width: 80px;
+    bottom: 100px;
+    left: 60%;
+    transform: rotate(10deg);
+}
+
+.pata4 {
+    width: 180px;
+    bottom: 100px;
+    left: 0;
+}
+
+/* Onda */
+#wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../img/onda.png);
+    background-size: 100% 100px;
+}
+
+ .wave1{
+    z-index: 999;
+    opacity: 1;
+    bottom: 0;
+}
+
+/* Círculo com imagem do cachorro */
+.cachorroInicio {
+    position: absolute;
+    right: -45px;
+    bottom: 30px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: url('../imgs/cachorroInicial.png') no-repeat center;
+    background-size: cover;
+    filter: drop-shadow(0 0 25px rgba(0,0,0,0.3));
+    right: 0; 
+    max-width: 100vw; 
+}
+
+/* Titulos */
+.tituloLand {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7B3C0A;
+    text-align: left;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #95633ad2;
+}
+
+.subtituloLand {
+    color: #fff;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+}
+
+#subLand1 {
+    width: 65%;
+    font-size: 26px;
+    font-weight: 70;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav img {
+    height: 50px;
+    padding-left: 15px;
+}
+
+.infoLand {
+    width: 44%;                 
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;       
+    justify-content: center;    
+    padding: 4% 0;               
+    text-align: center; 
+    margin-left: 14%;
+}
+
+.btnLand a {
+    text-decoration: none;
+    color: #fff;
+}
+#titInicioLand {
+    text-align: center;
+}
+/********************************************/
+/* Problemas */
+.containerProblemas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    padding-left: 10%;
+    max-width: 1200px;
+   
+}
+
+/* Colunas */
+.contP1 {
+    border-left: 4px solid #2b2b2b;
+    width: 55%;
+}
+
+.tituloProblemas {
+    flex: 1;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.faq {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    gap: 14px;
+}
+
+.barraProgresso {
+    width: 4px;
+    height: 30px; 
+    background-color: #ccc; 
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.faq.active .barraProgresso {
+    background-color: #A03800; 
+}
+
+
+.arrow {
+    font-size: 20px;
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-body {
+    padding: 0 25px;
+    display: none;
+    color: #212121;
+    line-height: 1.2;
+}
+
+.faq.active .faq-body {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.faq.active .tituloProblemas {
+    color: #A03800;
+}
+
+.faq.active .arrow {
+    color: #A03800;
+    transform: rotate(180deg);
+}
+
+.faq.active .barraProgresso {
+    background-color: #A03800;
+    height: 100%;
+}
+
+
+/* Coluna Imagens */
+.pequeno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pequeno .cardImg {
+    width: 150px;
+    height: 115px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid #542602;
+    box-shadow: 3px 3px 5px #29180ad2;
+    
+}
+
+.contP2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grande {
+    width: 260px;
+    height: 265px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid #542602;
+    box-shadow: 3px 3px 5px #29180ad2;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+} 
+
+/********************************************************************************/
+/* Solução */
+#titSolucao, .solucao {
+    text-align: center;
+}
+
+.subtituloSolucao {
+    color: #000000;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+}
+
+.cardS {
+    border-radius: 20px;
+    background-color: #542602;
+    color: #F0BF97;
+    box-shadow: 3px 3px 5px #29180ad2;
+    text-shadow: 2px 2px 4px #29180ad2;
+    width: auto;          
+    max-width: 340px;    
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    padding: 25px 16px;
+    margin-top: 3%;
+}
+
+.subCardS {
+    margin: 2%;
+}
+
+.cardS .imgSol {
+    border-radius: 20px;
+    width: 220px;
+    height: 160px;
+    z-index: 1;
+    margin-top: -60px;
+    box-shadow: 4px 4px 6px #29180ad2;
+    border: solid 1.5px #000;
+    
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #542602;
+    box-shadow: 4px 4px 6px #29180ad2;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #E0A575;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.cardSol-wrapper {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.cardSol-list .cardS {
+    user-select: none;
+    display: block;
+
+}
+
+.cardSol-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #542602
+}
+
+.cardSol-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/********************************************************************************/
+/* Impactos */
+.secaoImpactos {
+  background: #f5e1c8;
+  border: 2px solid #903500;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.tituloImpacto {
+  display: inline-block;
+  background: #fff;
+  color: #903500;
+  font-size: 2rem;
+  font-family: 'Titan One';
+  padding: 4px 16px;
+  border-radius: 8px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #542602;
+}
+
+.subtituloImpacto {
+  font-size: 1.3rem;
+  margin: 10px 0 25px;
+  color: #222;
+  font-family: 'Oswald';
+}
+
+.cardsImpactos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.cardImpacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-numero {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardImpacto img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.cardImpacto .numeroImpacto {
+  font-size: 2rem;
+  font-family: 'Titan One';
+  color: #903500;
+}
+
+.cardImpacto span {
+  font-size: 1rem;
+  color: #222;
+  font-family: 'Oswald';
+}
+
+
+/********************************************************************************/
+/* CTA */
+#tituloCta {
+    color: #E0A575;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #3c220cd2;
+    text-align: center;
+}
+
+/* subtítulo */
+.subtituloLand {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.0;
+    max-width: 600px; 
+    margin-bottom: 30px;
+}
+
+.cta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    align-items: flex-start;   
+    padding: 60px;             
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 2) 0%,   
+        rgba(0, 0, 0, 0.9) 30%,   
+        rgba(0, 0, 0, 0.5) 70%,  
+        rgba(0, 0, 0, 0) 100%     
+    ),
+    url("../imgs/imgCta.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+/* botão */
+.btnLand {
+    background: linear-gradient(141deg, rgba(84, 38, 2, 1) 0%, rgba(143, 65, 3, 1) 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+}
+
+.btnLand:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, rgba(143, 65, 3, 1)   0%, rgba(84, 38, 2, 1) 100%);
+}
+
+#btnLand1 {
+    position: relative;
+    z-index: 1000; 
+}
+
+#titProblemas {
+    margin-left: 10%;
+}
+
+.infoCta {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 42%;
+}
+
+
+/********************************************************************************/
+/* Footer */
+.footer {
+    background-color: #E0A575;
+    color: #663e17;
+    font-family: 'Oswald';
+    padding: 30px 50px 10px;
+}
+ 
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+ 
+.footerLogo img {
+    width: 200px;
+    height: auto;
+}
+ 
+.footerLinks h3,
+.footerContato h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #903500;
+}
+ 
+.footerLinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.footerLinks li {
+    margin-bottom: 4px;
+}
+ 
+.footerLinks a {
+    text-decoration: none;
+    color: #663e17;
+    font-size: 18px;
+}
+ 
+.footerLinks a:hover {
+    color: #542602;
+}
+ 
+.footerContato p {
+    margin: 4px 0;
+    font-size: 17px;
+}
+ 
+.footerCopy {
+    text-align: center;
+}
+ 
+.footerCopy hr {
+    border: none;
+    border-top: 1px solid #663e17;
+    margin-bottom: 5px;
+}
+ 
+.footerCopy p {
+    font-size: 13px;
+    margin: 0;
+}
+ 
+ 
