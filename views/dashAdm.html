@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Dashboard ADM</title>
+    <link rel="stylesheet" href="/css/dashOng2.css">
+    <link rel="stylesheet" href="/css/menuDash2.css">
+    <link rel="stylesheet" href="/css/perfils.css">
+    <link rel="stylesheet" href="/css/animais.css">
+    <link rel="stylesheet" href="/css/aprovação.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="containerDashOng">
+        <div class="navbarOng">
+            <img src="/imgs/logoCompleta.png" alt="" class="logo">
+            <br>
+            <div class="linksOng ativo" id="ativo">
+                <img src="/imgs/dash.png" alt="">
+                <li>Dashboard</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/animaisMenu.png" alt="">
+                <li>Animais</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/userOng.png" alt="">
+                <li>Perfils</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/check.png" alt="">
+                <li>Aprovação</li>
+            </div>
+
+
+            <div class="linksOng">
+                <img src="/imgs/postagens.png" alt="">
+                <li>Postagens</li>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="dash">
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="conteudo ativo">
+
+                <div class="colunasDash">
+                    <div class="coluna1">
+                        <h1 class="tituloDash">Gráfico de engajamento</h1>
+                        <div class="graficoEngajamento"> <img src="/imgs/grafico.png" alt=""> </div> <br>
+                        <div class="vagas">
+                            <h1 class="tituloDash">Vagas</h1>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Voluntário para Feirinha de Adoção</b></h2>
+                                    <h3><b>Tipo: </b> Voluntariado | Eventos</h3>
+                                    <h3><b>Local: </b> Presencial - São Paulo/SP</h3>
+                                    <h3><b>Descrição: </b> Auxilie na organização de feirinhas de adoção aos finais de
+                                        semana</h3>
+                                </div>
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>8</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Assistente Administrativo</b></h2>
+                                    <h3><b>Tipo: </b> Emprego | Administrativo</h3>
+                                    <h3><b>Local: </b> Remoto</h3>
+                                    <h3><b>Descrição: </b> Ajude no controle de cadastros de pets e relatórios
+                                        financeiros
+                                        da ONG.</h3>
+                                </div>
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>10</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Estágio em Auxílio Veterinário</b></h2>
+                                    <h3><b>Tipo: </b> Estágio | Cuidados com Animais</h3>
+                                    <h3><b>Local: </b> Presencial - São Paulo/SP</h3>
+                                    <h3><b>Descrição: </b> Apoie os veterinários no atendimento básico e vacinação de
+                                        pets.
+                                    </h3>
+                                </div>
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>12</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                        </div>
+                    </div>
+                    <div class="coluna2"> <!-- Seguidores -->
+                        <h1 class="tituloDash">Número de cadastrados</h1>
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Usuários</b> </p>
+                            </div>
+                            <div> <span class="numero">2</span></div>
+                        </div>
+
+                        <!-- Ongs -->
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Ongs</b> </p>
+                            </div>
+                            <div> <span class="numero">1</span></div>
+                        </div>
+
+                        <!-- Animais -->
+
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Animais</b></p>
+                            </div>
+                            <div> <span class="numero">4</span></div>
+                        </div>
+
+
+                        <!-- <div class="card post"> <img src="/imgs/vacinacao.png" alt="Post">
+                        <div class="info">
+                            <p class="titulo">Post mais curtido</p>
+                            <p class="descricao">Dia de vacinação Pet</p>
+                        </div>
+                    </div>  Funcionários -->
+                        <!-- <div class="card funcionarios">
+                        <h3>Funcionários</h3>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user1.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Luana Souza</p>
+                                    <p>Designer</p>
+                                    <p>Admissão: 12/02/2023</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox" checked> <span class="slider"></span> </label> </div>
+                        </div>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user2.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Rodrigo Santiago</p>
+                                    <p>Desenvolvedor</p>
+                                    <p>Admissão: 05/08/2022</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox"> <span class="slider"></span> </label> </div>
+                        </div>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user3.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Manuela Costa</p>
+                                    <p>Marketing</p>
+                                    <p>Admissão: 20/11/2021</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox" checked> <span class="slider"></span> </label> </div>
+                        </div>
+                    </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ANIMAIS -->
+            <div id="animais" class="conteudo">
+                <h1 class="tituloDash">Animais cadastrados</h1>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal4.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Caramelinho</p>
+                                <p>Cachorro</p>
+                                <p>Ong: Arca Brasil</p>
+                                <p>Data do resgate: 12/12/2024</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal1.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Matheo</p>
+                                <p>Esquilo</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/02/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal2.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Thonio</p>
+                                <p>Furão</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/05/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal3.jpeg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Luke</p>
+                                <p>Cachorro</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/02/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- PERFIS -->
+            <div id="perfils" class="conteudo">
+                <div class="colunaPerfis">
+                    <!-- Voluntários -->
+                    <div class="colunaPerfil">
+                        <h1 class="tituloDash">Perfis dos Voluntários</h1>
+
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>Assistente Administrativo</b></h2>
+                                <h3><b>Tipo: </b> Emprego | Administrativo</h3>
+                                <h3><b>Local: </b> Remoto</h3>
+                                <h3><b>Descrição: </b> Ajude no controle de cadastros de pets e relatórios
+                                    financeiros
+                                    da ONG.</h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>10</b></h2>
+                                    <h3><b>Inscritos</b></h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>Estágio em Auxílio Veterinário</b></h2>
+                                <h3><b>Tipo: </b> Estágio | Cuidados com Animais</h3>
+                                <h3><b>Local: </b> Presencial - São Paulo/SP</h3>
+                                <h3><b>Descrição: </b> Apoie os veterinários no atendimento básico e vacinação de
+                                    pets.
+                                </h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>12</b></h2>
+                                    <h3><b>Inscritos</b></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ONGs -->
+                    <div class="colunaPerfil">
+                        <h1 class="tituloDash">Perfis das ONGs</h1>
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>ONG Patinhas Felizes</b></h2>
+                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <h3><b>Área: </b> Resgate e Adoção</h3>
+                                <h3><b>Descrição: </b> Atende animais resgatados em situação de rua e promove
+                                    adoções.
+                                </h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>35</b></h2>
+                                    <h3><b>Animais</b></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usuários -->
+                    <div class="colunaPerfil">
+                        <h1 class="tituloDash">Perfis dos Usuários</h1>
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>Maria Oliveira</b></h2>
+                                <h3><b>Email: </b> maria@email.com</h3>
+                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <h3><b>Descrição: </b> Interessada em adoção de cães de pequeno porte.</h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>3</b></h2>
+                                    <h3><b>Adoções</b></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>Matheus Sebastian</b></h2>
+                                <h3><b>Email: </b> sebastian@email.com</h3>
+                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <h3><b>Descrição: </b> Interessado em adoção de cães e gatos de pequeno porte.</h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus" id="inativo">Inativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>1</b></h2>
+                                    <h3><b>Adoções</b></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- APROVAÇÃO -->
+            <div id="aprovação" class="conteudo">
+                <h1 class="tituloDash">Solicitação das ONGs</h1>
+
+                <div class="card aprovacoes">
+                    <div class="aprovacao">
+                        <div class="perfil"> <img src="/imgs/userOng1.png" alt="Foto">
+                            <div class="dados">
+                                <h2 class="nome">Projeto Mi & Au</h2>
+                                <p><b>Email:</b> contato@projetomieau.org.br</p>
+                                <p><b>CNPJ:</b> 32.987.654/0001-23</p>
+                                <p><b>CPF responsável:</b> 123.456.789-10</p>
+                                <p><b>CEP:</b> 03978-450</p>
+                                <p><b>Cidade:</b> São Paulo/SP</p>
+                            </div>
+                        </div>
+                        <div class="acoes-aprovacao">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card aprovacoes">
+                    <div class="aprovacao">
+                        <div class="perfil"> <img src="/imgs/userOng2.jpg" alt="Foto">
+                            <div class="dados">
+                                <h2 class="nome">Patinhas Felizes</h2>
+                                <p><b>Email:</b> contato@patinhasfelizesong.org.br</p>
+                                <p><b>CNPJ:</b> 32.123.654/0000-23</p>
+                                <p><b>CPF responsável:</b> 123.456.789-10</p>
+                                <p><b>CEP:</b> 03998-450</p>
+                                <p><b>Cidade:</b> São Paulo/SP</p>
+                            </div>
+                        </div>
+                        <div class="acoes-aprovacao">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                
+            </div>
+
+            <!-- POSTAGENS -->
+            <div id="postagens" class="conteudo">
+                <h1 class="tituloDash">Postagens</h1>
+                <p>EM DESENVOLVIMENTO</p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="/js/menuDash2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Landing Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./imgs/logoFocinho.png" type="image/x-icon">
+    <!-- Link SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+
+    <!-- Ajax -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.min.css">
+
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/inicioLand.css">
+    <link rel="stylesheet" href="/css/passos.css">
+    <link rel="stylesheet" href="/css/respLand.css">
+</head>
+<body>
+    <!-- Início -->
+    <div class="fundoInicio" id="inicio">
+        <nav>
+            <img src="./imgs/logoCompleta.png" alt="" class="logo">
+        </nav>
+
+        <!-- Pegadas -->
+        <div class="pegadas">
+            <img class="pata pata1" src="/imgs/pata.png" alt="">
+            <img class="pata pata2" src="/imgs/pata.png" alt="">
+            <img class="pata pata3" src="/imgs/pata.png" alt="">
+            <img class="pata pata4" src="/imgs/pataLatLand.png" alt="">
+        </div>
+
+        <!-- Texto Inicial -->
+        <div class="infoLand">
+            <h1 class="tituloLand" id="titInicioLand">Encontre aqui seu melhor amigo de quatro patas</h1>
+            <h2 class="subtituloLand" id="subLand1">No Farejo, conectamos animais e famílias através da adoção responsável e do cuidado.</h2>
+
+            <br>
+            <a href="/" style="text-decoration: none;">
+                <button class="btnLand" id="btnLand1">Conhecer o Farejo<i class="material-icons">arrow_outward</i></button>
+            </a>
+         
+        </div>
+
+        <!-- Círculo com cachorro -->
+        <div class="cachorroInicio"></div>
+
+         <!-- Onda -->
+        <div class="wave1" id="wave"></div>
+    </div>
+
+    <br> 
+
+    <!-- Problemas -->
+    <div class="problemas" id="problemas">
+        <h1 class="tituloLand" id="titProblemas">Problemas enfrentados</h1>
+
+        <div class="containerProblemas">
+
+            <!-- Coluna FAQ -->
+            <div class="contP1">
+                <div class="faq" data-index="1">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <div class="barraProgresso" id="progress-1"></div>
+                    <div class="tituloProblemas">Falta de visibilidade das ONGs</div>
+                    <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-body">
+                    <p>Muitas ONGs que acolhem animais abandonados funcionam de forma independente, sem apoio do governo. Isso faz com que a divulgação de 
+                        seu trabalho seja limitada, impactando diretamente na quantidade de adoções realizadas. Segundo o Instituto Pet Brasil, mais de 201 
+                        mil animais estão sob tutela dessas organizações, mas a maioria ainda enfrenta dificuldades estruturais e financeiras para se manter.
+                         Sem visibilidade, as chances desses animais encontrarem um lar diminuem drasticamente.</p>
+                </div>
+                </div>
+
+                <div class="faq" data-index="2">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <div class="barraProgresso" id="progress-2"></div>
+                    <div class="tituloProblemas">Milhares de animais sem lar e a superlotação</div>
+                    <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-body">
+                    <p>O Brasil possui cerca de 30 milhões de animais abandonados, segundo dados da OMS. Esse número alarmante gera superlotação nos abrigos, já
+                         que as ONGs não conseguem atender à alta demanda. Muitas delas chegam ao limite de capacidade, impossibilitadas de resgatar novos casos. 
+                         Além disso, a reprodução desenfreada e os maus-tratos contribuem para que esse cenário se mantenha cada vez mais crítico, conforme alerta 
+                         a Ampara Animal.</p>
+                </div>
+                </div>
+
+                <div class="faq" data-index="3">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <div class="barraProgresso" id="progress-3"></div>
+                    <div class="tituloProblemas">Falta de informações confiáveis</div>
+                    <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-body">
+                    <p>Grande parte da população desconhece informações essenciais sobre processos de adoção, castração, vacinação e cuidados básicos. Essa falta de 
+                        comunicação entre ONGs e sociedade contribui para que milhares de animais permaneçam sem lar. Embora existam iniciativas positivas — como os 
+                        mais de 4 milhões de microdoações que arrecadaram R$ 985 mil e apoiaram acima de 11 ONGs (dados do blog Petz) — ainda há muito a ser feito em 
+                        termos de conscientização e divulgação confiável para reduzir os índices de abandono.</p>
+                </div>
+                </div>
+            </div>
+
+            
+            <!-- Coluna Imagens -->
+            <div class="contP2">
+                <div class="pequeno">
+                    <img class="cardImg" src="/imgs/img1.png" alt=""></img>
+                    <img class="cardImg" src="/imgs/img2.png" alt=""></img>
+                </div>
+                
+                <img class="cardImg grande" src="/imgs/img4.jpeg" alt=""></img>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- Nossa solução -->
+    <div class="solucao" id="solucao">
+        <h1 class="tituloLand" id="titSolucao">Nossa solução</h1>
+        <h3 class="subtituloSolucao">O Farejo busca facilitar a conexão entre ONGs, adotantes e parceiros, tornando o processo de adoção mais simples e transparente.</h3>
+
+            <div class="swiper cardSol-wrapper">
+                <ul class="swiper-wrapper cardSol-list">
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol1.png" alt="">
+                        <h2 class="subCardS">Descubra ONGs e canis próximos de você</h2>
+                    </li>
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol2.png" alt="">
+                        <h2 class="subCardS">Confira dicas de cuidados com o seu pet</h2>
+                    </li>
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol3.png" alt="">
+                        <h2 class="subCardS">Busque cães e gatos disponíveis para adoção perto de você</h2>
+                    </li>
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol4.png" alt="">
+                        <h2 class="subCardS">Saiba onde encontrar hospitais e clínicas 24 horas</h2>
+                    </li>
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol5.png" alt="">
+                        <h2 class="subCardS">Veja feiras de adoção acontecendo na sua  região</h2>
+                    </li>
+
+                    <li class="cardS swiper-slide">
+                        <img class="imgSol" src="/imgs/imgSol6.png" alt="">
+                        <h2 class="subCardS">Inspire-se com relatos de adoções bem-sucedidas</h2>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+        </div>
+     </div>
+
+     <br>
+   
+    <!-- Vídeo pitch -->
+     <div class="pitch">
+        <h1 class="tituloLand">Confira nosso vídeo pitch</h1>
+        <br>
+        <video class="video" controls poster="./imgs/demo.jpg">
+            <source src="./imgs/videoPitch.mp4" type="video/mp4">
+        </video>
+     </div>
+
+     <br>
+    <!-- Passo a passo -->
+    <section class="como-funciona" id="tutorial">
+        <h2 class="tituloLand">Como funciona</h2>
+
+        <div class="auxFiltro">
+            <div class="filtro">
+            <button class="opcao active" id="usuario" onclick="filterSelection('usuario')">Usuário</button>
+            <button class="opcao" id="ong" onclick="filterSelection('ong')">ONG</button>
+            <button class="opcao" id="profissional" onclick="filterSelection('profissional')">Profissional</button>
+            </div>
+        </div>
+        
+    
+        <!-- Sessão usuário -->
+        <div class="sessaoTutorial usuario">
+            <div class="imgTutorial" id="imgUser">
+                <div class="textoCard">
+                    <h2 class="titTutorial">Usuário</h2>
+                    <h3 class="descTutorial"> Descubra animais que aguardam um lar, encontre ONGs confiáveis, participe de feiras e acesse dicas de cuidados e serviços para o seu pet.</h3>
+       
+                </div>
+            </div>
+    
+            <!-- Usuario -->
+            <div class="timeline-container">
+                <div class="controles-verticais">
+                    <button class="prev">ANT.</button>
+                    <div class="timeline" id="timeUsuario">
+                        <span class="bolinha ativo"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                    </div>
+                    <button class="next">PRÓX.</button>
+                </div>
+
+                <div class="passos">
+                <div class="passo ativo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">1</h1>
+                        <h3>Crie sua conta ou faça login</h3>
+                    </div>
+                    
+                    <p>Libere tudo que o Farejo tem de bom.</p>
+                </div>
+                <div class="passo proximo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">2</h1>
+                        <h3>Personalize suas preferências</h3>
+                    </div>
+                    <p>Assim você vê só o que mais importa.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">3</h1>
+                        <h3>Explore os pets e eventos</h3>
+                    </div>
+                    <p>Descubra oportunidades perto de você.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">4</h1>
+                        <h3>Entre em contato com a ONG</h3>
+                        </div>
+                    <p>Dê o primeiro passo para transformar uma vida.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">5</h1>
+                        <h3>Visite, adote e compartilhe sua história</h3>
+                    </div>
+                    <p>Leve seu novo amigo pra casa e inspire outros adotantes</p>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Sessão ong -->
+        <div class="sessaoTutorial ong">
+            <div class="imgTutorial" id="imgOng">
+                <div class="textoCard">
+                    <h2 class="titTutorial">ONG</h2>
+                    <h3 class="descTutorial"> Descubra animais que aguardam um lar, encontre ONGs confiáveis, participe de feiras e acesse dicas de cuidados e serviços para o seu pet.</h3>
+      
+                </div>
+            </div>
+    
+            <!-- Ong -->
+            <div class="timeline-container">
+                <div class="controles-verticais">
+                    <button class="prev">ANT.</button>
+                    <div class="timeline" id="time7">
+                        <span class="bolinha ativo"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                    </div>
+                    <button class="next">PRÓX.</button>
+                </div>
+
+                <div class="passos">
+                <div class="passo ativo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">1</h1>
+                        <h3>Cadastre sua ONG</h3>
+                    </div>
+                    
+                    <p>Clique em “Cadastrar minha ONG” e envie os dados</p>
+                </div>
+                <div class="passo proximo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">2</h1>
+                        <h3>Aguarde a aprovação por e-mail</h3>
+                    </div>
+                    <p>Vamos confirmar a verificação e te mandar a senha.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">3</h1>
+                        <h3>Entre no Farejo e complete seu perfil</h3>
+                    </div>
+                    <p>Conte sua missão, mostre fotos e adicione contatos</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">4</h1>
+                        <h3>Publique pets, campanhas e eventos</h3>
+                        </div>
+                    <p>Deixe tudo atualizado e fácil pros adotantes encontrarem</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">5</h1>
+                        <h3>Atualize o status do pet e celebre conquistas</h3>
+                    </div>
+                    <p>Mostre os resultados e mantenha seu feed vivo</p>
+                </div>
+
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">6</h1>
+                        <h3>Responda com carinho e agilidade</h3>
+                    </div>
+                    <p>Assim os interessados se sentem acolhidos e confiantess</p>
+                </div>
+
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">7</h1>
+                        <h3>Acompanhe seus resultados no dashboard</h3>
+                    </div>
+                    <p>Veja o alcance, contatos recebidos e o impacto da sua ONG</p>
+                </div>
+
+
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Sessão Profissional -->
+        <div class="sessaoTutorial profissional">
+            <div class="imgTutorial" id="imgProfissional">
+                <div class="textoCard">
+                    <h2 class="titTutorial">Profissional</h2>
+                    <h3 class="descTutorial">Cadastre-se, monte seu currículo e se candidate a vagas de emprego, estágio ou voluntariado.</h3>
+                </div>
+                
+            </div>
+    
+            <!-- profissional -->
+           <div class="timeline-container">
+                <div class="controles-verticais">
+                    <button class="prev">ANT.</button>
+                    <div class="timeline" id="time7">
+                        <span class="bolinha ativo"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                        <span class="bolinha"></span>
+                    </div>
+                    <button class="next">PRÓX.</button>
+                </div>
+
+                <div class="passos">
+                <div class="passo ativo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">1</h1>
+                        <h3>Crie sua conta ou faça login</h3>
+                    </div>
+                    
+                    <p>Acesse a plataforma e libere as oportunidades para profissionais.</p>
+                </div>
+                <div class="passo proximo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">2</h1>
+                        <h3>Monte seu currículo no perfil</h3>
+                    </div>
+                    <p>Adicione suas experiências, habilidades e interesses.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">3</h1>
+                        <h3>Acesse a área de vagas</h3>
+                    </div>
+                    <p>Entre no feed e explore as oportunidades disponíveis.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">4</h1>
+                        <h3>Use os filtros de pesquisa</h3>
+                        </div>
+                    <p>Busque por vagas de emprego, estágio ou voluntariado que combinem com você.</p>
+                </div>
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">5</h1>
+                        <h3>Candidate-se facilmente</h3>
+                    </div>
+                    <p>Clique em “Quero me candidatar” para participar da seleção.</p>
+                </div>
+
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">6</h1>
+                        <h3>Aguarde o retorno da ONG ou empresa</h3>
+                    </div>
+                    <p>Receba atualizações sobre sua candidatura diretamente no sistema.</p>
+                </div>
+
+                <div class="passo">
+                    <div class="passoSup">
+                        <h1 class="passoNumero">7</h1>
+                        <h3>Acompanhe sua jornada</h3>
+                    </div>
+                    <p>Veja o histórico de candidaturas e organize seus próximos passos no dashboard.</p>
+                </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <br><br>
+
+    <!-- Impactos-->
+    <section class="secaoImpactos">
+    <h2 class="tituloImpacto">Nossos impactos</h2>
+    <p class="subtituloImpacto">Juntos, já transformamos muitas histórias!</p>
+    
+    <div class="cardsImpactos">
+        <div class="cardImpacto">
+        <div class="icon-numero">
+            <img src="./imgs/Pets.png" alt="Animais cadastrados">
+            <p class="numeroImpacto" data-target="120">+0</p>
+        </div>
+        <span>Animais cadastrados</span>
+        </div>
+    
+        <div class="cardImpacto">
+        <div class="icon-numero">
+            <img src="./imgs/High Five.png" alt="ONGs parceiras">
+            <p class="numeroImpacto" data-target="10">+0</p>
+        </div>
+        <span>ONGs parceiras</span>
+        </div>
+    
+        <div class="cardImpacto">
+        <div class="icon-numero">
+            <img src="./imgs/Find Clinic.png" alt="Hospitais e clínicas">
+            <p class="numeroImpacto" data-target="15">+0</p>
+        </div>
+        <span>Hospitais e clínicas</span>
+        </div>
+    
+        <div class="cardImpacto">
+        <div class="icon-numero">
+            <img src="./imgs/Users.png" alt="Pessoas conectadas">
+            <p class="numeroImpacto" data-target="200">+0</p>
+        </div>
+        <span>Pessoas conectadas</span>
+        </div>
+    </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <div class="depoimentos" id="depoimentos">
+
+    </div>
+
+
+    <!-- Link para a página -->
+    <div class="cta">
+        <div class="infoCta">
+            <h1 class="tituloLand" id="tituloCta">Quer fazer parte da mudança?</h1>
+            <h2 class="subtituloLand" id="subLand1">Apoie ONGs, conheça eventos e encontre pets esperando carinho.</h2>
+
+            <br>
+
+            <div class="btnPrincipal">
+                <button class="btnLand"><a href="/">Conhecer o Farejo</a> <i class="material-icons">arrow_outward</i></button>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footerContainer">
+        
+            <!-- LOGO -->
+            <div class="footerLogo">
+            <img src="./imgs/logoFarejo.png" alt="Logo Farejo">
+            
+            </div>
+        
+            <!-- LINKS RÁPIDOS -->
+            <div class="footerLinks">
+            <h3>› LINKS RÁPIDOS</h3>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#problemas">Problemas</a></li>
+                <li><a href="#solucao">Solução</a></li>
+                <li><a href="#tutorial">Passo a passo</a></li>
+            </ul>
+            </div>
+        
+            <!-- CONTATO -->
+            <div class="footerContato">
+            <h3>› CONTATO</h3>
+            <p>📍 Rua Igarapé Água Azul, 70 – SP</p>
+            <p>✉ farejo@gmail.com</p>
+            </div>
+        </div>
+        
+        <!-- COPYRIGHT -->
+        <div class="footerCopy">
+            <hr>
+            <p>2025 Farejo</p>
+        </div>
+    </footer>
+    
+
+    <script src="/js/landing.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/carrosselLanding.js"></script>
+</body>
+</html>

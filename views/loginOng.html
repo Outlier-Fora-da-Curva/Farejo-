@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logar ONG</title>
+    <link rel="stylesheet" href="/css/cadastro/nav.css">
+    <link rel="stylesheet" href="/css/cadastro/geral.css">
+    <link rel="stylesheet" href="/css/cadastro/cadastro.css">
+    <link rel="stylesheet" href="/css/cadastro/login.css">
+    <link rel="stylesheet" href="/css/cadastro/responsividade.css">
+    <link rel="stylesheet" href="/css/cadastro/aposLogin.css">
+</head>
+
+<body>
+    <nav class="logo">
+        <img src="/imgs/cadastro/logo.png" alt="">
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <h1>Bem-vindo de volta!</h1>
+            <p>Entre com sua conta e continue ajudando a transformar vidas.</p>
+            <img src="/imgs/cadastro/cachorroCadastroOng.png" alt="Cachorro feliz" class="dog-img">
+        </div>
+
+        <div class="right">
+            <div class="cadastro-header">
+                <h2>LOGIN</h2>
+                <div id="mensagem" style="color: rgb(182, 255, 182); font-size: 18px;"></div>
+            </div>
+
+            <form action="/loginOng" method="post" id="cadastroForm">
+                <div class="etapa">
+
+                    <label>CNPJ:</label>
+                    <input type="text" id="cnpj" name="cnpj" required placeholder=" "/>
+
+                    <label>Senha:</label>
+                    <input type="password" name="password" required placeholder=" "/>
+
+                </div>
+
+                <p class="btnVoltar"> Não possuí uma conta? <a class="voltar" href="/cadastroOng">Cadastre-se</a> </p>
+
+                <div class="botoes">
+                    <button type="submit" id="btnVoltar">LOGIN</button>
+                </div>
+
+            </form>
+        </div>
+    
+
+              <!-- Importa a biblioteca IMask -->
+    <script src="https://unpkg.com/imask"></script>
+ 
+    <script>
+        // === CNPJ ===
+        const inputCNPJ = document.getElementById("cnpj");
+        if (inputCNPJ) {
+        IMask(inputCNPJ, {
+            mask: "00.000.000/0000-00"
+        });
+        }
+    </script>
+
+    <script>
+        // Captura os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get('sucesso')) {
+        const msgDiv = document.getElementById('mensagem');
+        msgDiv.textContent = "Cadastro realizado com sucesso!";
+        msgDiv.classList.add("mensagem");
+        }
+    </script>
+
+</body>
+
+</html>
