@@ -63,7 +63,7 @@ body {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url(../img/onda.png);
+    background: url("../imgs/onda.png");
     background-size: 100% 100px;
 }
 
@@ -576,3 +576,4 @@ img {
 }
  
  
+
