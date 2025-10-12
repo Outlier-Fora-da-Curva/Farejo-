@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Feed</title>
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/feed.css">
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+    
+    <!-- Menu -->
+    <header>
+        <img src="/imgs/logoFarejo.png" alt="Logo Farejo" class="logo">
+
+        <nav>
+            <a href="http://localhost:3000/inicial">Início</a>
+            <a href="http://localhost:3000/feed">Feed</a>
+            <a href="http://localhost:3000/animaisOng">Animais</a>
+            <a href="#cuidados">Cuidados</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="http://localhost:8000/login" class="btnLogin"></a>
+
+        <!-- Botão Menu Hamburguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+
+    <!-- Feed -->
+    <div class="containerFeed">
+        <div class="filtrosFeed">
+            <h1 class="tituloFiltros">Explorar</h1>
+
+            <form class="ordenar">
+                <!-- limpar filtros -->
+                <h2 class="ord1">Ordenar por:</h2>
+                <ul class="ordenarOpc">
+                    <li><input type="radio" name="ordenacao" id="recentes">Mais recentes</li>
+                    <li><input type="radio" name="ordenacao" id="proximos">Mais prómimos de mim</li>
+                    <li><input type="radio" name="ordenacao" id="seguidas">Somente ONGs seguidas por mim</li>
+                </ul>
+                
+                
+            </form>
+
+            <form class="ordenar2">
+                <!-- limpar filtros -->
+                <h2 class="ord1">Ordenar por:</h2>
+                <ul class="ordenarOpc">
+                    <li class="ord">
+                        <img src="/imgs/animais.png" alt="" class="iconFiltro">
+                        Animais
+                    </li>
+
+                        <ul class="tipoAnimal">
+                            <li><input type="radio" name="ordenacao" id="recentes" active>Todos</li>
+                            <li><input type="radio" name="ordenacao" id="recentes">Cachorros</li>
+                            <li><input type="radio" name="ordenacao" id="recentes">Gatos</li>
+                        </ul>
+
+                    <li class="ord">
+                        <img src="/imgs/eventos.png" alt="" class="iconFiltro">
+                        Eventos
+                    </li>
+                 
+                   <li class="ord">
+                        <img src="/imgs/campanhas.png" alt="" class="iconFiltro">
+                        Campanhas
+                    </li>
+                 
+                    <li class="ord">
+                        <img src="/imgs/dicas.png" alt="" class="iconFiltro">
+                        Dicas de cuidado
+                    </li>
+                  
+                </ul>
+                
+                
+            </form>
+        </div>
+
+        <div class="feedPrincipal">
+            <form class="barraBusca" action="/action_page.php">
+                <input class="busca" type="search" placeholder="O que você procura.." name="search">
+                <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            
+        </div>
+
+        <div class="perfilOngs">
+            <h2 class="tituloFiltros" id="perfilOngs">Institiuições parceiras</h2>
+
+        </div>
+    </div>
+
+    <script src="/js/inicial.js"></script>
+    <script src="/js/feed.js"></script>
+</body>
+</html>
