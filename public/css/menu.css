@@ -1,0 +1,104 @@
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+
+/* Navbar */
+header {
+    background: #AF620B;
+    background: linear-gradient(90deg,rgba(175, 98, 11, 1) 2%, rgba(214, 135, 46, 1) 41%, rgba(140, 77, 7, 1) 100%);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 12px 40px; 
+    top: 0; 
+    height: 80px;
+    z-index: 10;
+    font-family: 'Oswald', sans-serif;
+    position: sticky;
+}
+    
+.logo { 
+   width: 190px;
+}
+
+nav a { 
+    margin: 0 12px; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 20px;
+}
+
+
+nav a:hover {
+     color: #903500;
+}
+    
+nav a.active {
+    color: #903500;
+    font-weight: bold;
+}
+
+.btnLogin { 
+    border-radius: 50%;
+    width: 40px;
+    background-color: transparent;
+    height: 40px;
+    background-image: url(../img/user.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: transparent;
+}
+
+.btnLogin:hover { 
+    background: #903500; 
+    transform: scale(1.05); 
+}
+
+
+/* Responsividade */
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 220px;
+    background: #E2AC7F;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+  }
+
+  nav a {
+    margin: 12px 0;
+    font-size: 18px;
+  }
+
+  .btnLogin {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.ativo {
+    display: flex;
+  }
+}

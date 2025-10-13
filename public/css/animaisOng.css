@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+.funcAnimais {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #BF9D76;
+    display: flex;
+    justify-content: center;  /* centraliza os botões */
+    gap: 60px;                /* espaço entre eles */
+    padding: 20px;
+    z-index: 900;
+    box-shadow: 2px 2px 4px #000000ab;
+}
+
+/* Os botões da barra */
+.verMais {
+    border-radius: 18px;
+    border: 2px solid #673005;
+    padding: 10px 20px;
+    font-size: 22px;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    background-color: #673005;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 26%;
+    box-shadow: 2px 2px 4px #000000ab;
+}
+
+.verMais:hover {
+    background-color: #8a4510;
+}
+
+.btnFuncao {
+    border-radius: 18px;
+    border: 2px solid #673005;
+    padding: 12px 24px;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    background-color: #673005;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-width: 200px;      /* largura mínima */
+    width: 46;           /* deixa o botão crescer conforme o texto */
+    box-shadow: 2px 2px 4px #000000ab;
+    text-align: center;
+}
+
+.btnFuncao:hover {
+    background-color: #8a4510;
+}
+
+.verMais {
+    font-size: 18px;
+    border-radius: 20px;
+    width: 86%;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+
+.containerAnimais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Pets */
+.col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.pets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    width: 100%; 
+    max-width: 1200px; 
+    height: 380px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+
+.selecionarPet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.imgPet {
+    background-color: #673005;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 220px;
+    height: 180px;
+    margin-bottom: 0;
+    box-shadow: 0 0 4px #000000ab;
+}
+
+.imgPet img {
+    width: 180px;
+    height: 180px;
+}
+
+.cardPet {
+    background-color: #dfdbdb;
+    width: auto;
+    height: 346px;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    border: 1.5px solid #673005;
+    box-shadow: 2px 2px 4px #000000ab;
+
+}
+
+.infosPet {
+    line-height: 2px;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.raca {
+    margin-top: 8px;
+}
+
+.nomePet {
+    font-family: "Oswald", sans-serif;
+    font-weight: 550;
+    color: #673005;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 0 0 2px #000000ab;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2px;
+}
+
+.infos img {
+    width: 25px;
+    height: 25px;
+}
+

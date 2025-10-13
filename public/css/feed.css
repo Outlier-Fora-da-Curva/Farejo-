@@ -1,0 +1,171 @@
+.containerFeed {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px; /* 3 colunas */
+    height: 100vh;
+}
+
+/* Filtros */
+.filtrosFeed, .perfilOngs {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+} 
+
+.filtrosFeed {
+    background-color: #BF9D76;
+    padding: 20px;
+    border: solid 2px #7B3C0A;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+}
+
+.tituloFiltros {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7B3C0A;
+    text-align: left;
+    font-size: 20px;
+}
+
+.ordenar, .ordenar2 {
+    margin-top: 6%;
+    width: 200px;
+    padding: 12px;
+    background-color: #EDDBC7;
+    border-radius: 20px;
+    border: 1.5px solid #592F16;
+    padding-bottom: 20px;
+}
+
+/* Filtros selecionáveis */
+.ord {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.ord1 {
+    color: #8C4D07;
+    font-size: 20px; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    
+}
+
+ul {
+    list-style: none;
+    margin-left: 4px;
+   
+}
+
+li {
+    color: #592F16;
+    font-size: 16px; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+
+input {
+    margin-right: 10px;
+    
+}
+
+.ord {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.tipoAnimal {
+    margin-left: 18%;
+}
+
+.ord img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.ord.selecionado {
+    background: #E2AC7F;
+    border: solid 1.5px #592F16;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.ord:hover {
+    background: #E2AC7F;
+    border: solid 1.5px #592F16;
+    font-weight: bold;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+/**********************************************/
+/* Área de posts */
+.feedPrincipal {
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Barra de busca */
+.barraBusca {
+    width: 60%;
+    height: 50px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #7B3C0A;
+    border-radius: 20px;
+    background-color: #EDDBC7;
+    font-family: "Oswald", sans-serif;
+    color: #592F16;
+    display: flex;
+    overflow: hidden;
+}
+
+.busca {
+    flex: 1; 
+    font-family: "Oswald", sans-serif;
+    color: #592F16;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 0 12px;
+    outline: none;
+}
+
+.lupa {
+    width: 60px;
+    height: 100%;
+    background-color: #592F16;
+    border: none;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    font-size: 20px;
+    color: #EDDBC7;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**********************************************/
+
+/* Ongs*/
+.perfilOngs {
+    background-color: #EDDBC7;
+    padding: 20px;
+    border: solid 2px #7B3C0A;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+    margin-right: 0;
+}
+
+#perfilOngs {
+    text-align: center;
+    font-family: "Titan One", sans-serif;
+    color: #7B3C0A;
+}

@@ -56,6 +56,23 @@ app.get("/dashOng", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "dashOng.html"));
 });
 
+//animais
+app.get("/animaisOng", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "animaisOng.html"));
+});
+
+//feed
+app.get("/feed", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "feed.html"));
+});
+
+//publicidade
+app.get("/publicidade", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "publicidade.html"));
+});
+
+
+
 // Rotas de cadastro
 
 

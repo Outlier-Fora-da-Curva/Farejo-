@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Farejo - Dashboard ONG</title>
+    <link rel="stylesheet" href="/css/dashOng.css">
+    <link rel="stylesheet" href="/css/dashOngResp.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="stylesheet" href="/css/publicidades.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="containerDashOng">
+        <!-- Menu -->
+      <div class="navbarOng recolhido">
+          <div class="btn-abrir">
+              <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+          </div>
+
+          <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+          <br>
+          <div class="linksOng ">
+              <img src="/imgs/dash.png" alt="">
+              <li><a href="/dashOng">Dashboard</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/animaisMenu.png" alt="">
+              <li><a href="/animaisOng">Animais</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/localizacaoOng.png" alt="">
+              <li><a href="/localizacao">Localização</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/publicidadeOng.png" alt="">
+              <li><a href="/publicidade">Publicidade</a></li>
+          </div>
+
+          <div class="linksOng ativo" id="ativo">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/postagens">Postagens</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/userOng.png" alt="">
+              <li><a href="/perfil">Perfil</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/feed">Feed</a></li>
+          </div>
+
+      </div>
+
+    <div class="publicidades">
+        <h1 class="tituloPublicidade">Publicidades</h1>
+         <button class="btnPublicidades" id="abrirModal">+ Cadastrar nova publicidade</button>
+
+         <!-- Tabela de publicidades -->
+      <table id="tabelaPublicidades">
+        <thead>
+          <tr>
+            <th class="titutoTabela">Banner</th>
+            <th class="titutoTabela">Título</th>
+            <th class="titutoTabela">Status</th>
+            <th class="titutoTabela">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- novas linhas -->
+        </tbody>
+      </table>
+
+    </div>
+
+    <!-- Modal CADASTRAR -->
+  <div class="modal" id="modalCadastro">
+    <div class="modal-content">
+      <h2>Cadastrar Publicidade</h2>
+      <form id="formPublicidade">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" required>
+
+        <label for="imagem">Imagem</label>
+        <input type="file" id="imagem" accept="image/*" required>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" required></textarea>
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="Ativo">Ativo</option>
+          <option value="Expirado">Inativo</option>
+        </select>
+
+        <label for="dataInicio">Data início</label>
+        <input type="date" id="dataInicio" required>
+
+        <label for="dataFim">Data fim</label>
+        <input type="date" id="dataFim" required>
+
+        <div class="botoes">
+          <button type="button" class="btn btn-cancelar" id="fecharModal">Cancelar</button>
+          <button type="submit" class="btn btn-salvar">Salvar</button>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+
+  <!-- MODAL EDITAR PUBLICIDADE -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h3>Edit Publi</h3>
+
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" value="Campanha Pet">
+
+      <label for="descricao">Descrição (opcional)</label>
+      <textarea id="descricao">Participe da nossa campanha.</textarea>
+
+      <label>Imagem</label>
+      <div class="image-upload"> Clique para trocar imagem</div>
+
+      <label for="status">Status</label>
+      <select id="status">
+        <option selected>Ativo</option>
+        <option>Inativo</option>
+      </select>
+
+      <label>Data de Exibição</label>
+      <div style="display: flex; gap: 10px;">
+        <input type="date" value="2025-08-30">
+        <input type="date" value="2025-09-20">
+      </div>
+
+      <div class="actions">
+        <button class="btn save">Salvar alterações</button>
+        <button class="btn cancel" onclick="closeModal()">Cancelar</button>
+        <button class="btn delete-modal">Deletar</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/publicidade.js"></script>
+</body>
+</html>
