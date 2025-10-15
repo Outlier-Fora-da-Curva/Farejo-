@@ -46,7 +46,7 @@ body {
     
 }
 
-.graficoEngajamento img {
+.graficoEngajamento canvas {
     width: auto;
     height: 300px;
 }
