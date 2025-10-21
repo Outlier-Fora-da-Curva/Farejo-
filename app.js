@@ -66,6 +66,35 @@ app.get("/feed", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "feed.html"));
 });
 
+//cuidados
+app.get("/cuidadosPets", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "cuidadosPets.html"));
+});
+
+app.get("/alimentacaoSaudavel", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "alimntSaudavel.html"));
+});
+
+app.get("/higieneBanho", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "higieneBanho.html"));
+});
+
+app.get("/comportamento", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "comportamento.html"));
+});
+
+app.get("/brincadeiras", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "brincadeiras.html"));
+});
+
+app.get("/vacinacao", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "vacinacao.html"));
+});
+
+app.get("/passeios", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "passeios.html"));
+});
+
 //publicidade
 app.get("/publicidade", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "publicidade.html"));
