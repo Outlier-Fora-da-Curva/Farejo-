@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Perfil Usuário</title>
+</head>
+<body>
+    <div class="containerDashOng">
+        
+        <!-- Navbar Lateral -->
+        <div class="navbarOng recolhido">
+            <div class="btn-abrir">
+                <span class="material-symbols-outlined" id="btn-abrir"><img id="logoMenu"  src="/imgs/perfilUsuario/logoFocinho.png" alt="" class="logo"></span>
+            </div>
+                
+            <div class="linksOng">
+                <img src="/imgs/perfilUsuario/animaisMenu.png" alt="">
+                <li>Animais</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/perfilUsuario/localizacaoOng.png" alt="">
+                <li>Localização</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/perfilUsuario/publicidadeOng.png" alt="">
+                <li>Publicidade</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/perfilUsuario/postagens.png" alt="">
+                <li>Postagens</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/perfilUsuario/userOng.png" alt="">
+                <li>Perfil</li>
+            </div>
+        
+        </div>
+
+
+        <!-- Conteudo Principal - Perfil -->
+         <div class="containerPerfil">
+            <h1 class="tituloPerfil">Perfil Usuário</h1>
+            <br>
+            
+  <div class="card">
+
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="info">Informações</div>
+      <div class="tab" data-tab="contato">Contato</div>
+    </div>
+
+    <!-- Conteúdo da aba "Informações ONG" -->
+    <div class="tab-content active" id="info">
+      <div class="profile-header">
+        <img src="/imgs/perfilUsuario/fotoPerfilUsuario.png" alt="Logo ONG">
+        <div>
+          <p><strong>André Moreira</strong></p>
+          <p>andre22@gmail.com</p>
+        </div>
+        <button>Editar foto</button>
+      </div>
+
+      <form>
+     
+
+       <h3>Preferências</h3>
+
+    <div class="btn-group">
+      <button type="button" class="btn" data-value="Cachorro">Cachorro</button>
+      <button type="button" class="btn" data-value="Gato">Gato</button>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" class="btn" data-value="Macho">Macho</button>
+      <button type="button" class="btn" data-value="Fêmea">Fêmea</button>
+    </div>
+
+    <div id="resultado"></div>
+<br>
+        <button type="button" class="save-btn" id="salvar">SALVAR</button>
+
+      </form>
+    </div>
+
+    <!-- Conteúdo da aba "Contato" -->
+    <div class="tab-content" id="contato">
+      <form>
+        <label>Contato</label>
+        <input type="text" placeholder="Nome">
+
+        <label>Email</label>
+        <input type="email" placeholder="email@exemplo.com">
+
+        <label>Telefone</label>
+        <input type="text" placeholder="(xx) xxxxx-xxxx">
+
+        <label>Endereço</label>
+        <input type="text" placeholder="Rua, número, cidade, estado">
+<br><br>
+        <button type="button" class="save-btn">SALVAR</button>
+      </form>
+    </div>
+  </div>
+
+         </div>
+
+
+
+    </div>
+
+
+   
+
+</body>
+<script src="/js/perfilUsuario.js"></script>
+</html>

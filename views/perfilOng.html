@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/perfilOng.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Perfil ONG</title>
+</head>
+<body>
+    <div class="containerPerfilOng">
+        
+        <!-- Navbar Lateral -->
+        <div class="navbarOng recolhido">
+          <div class="btn-abrir">
+              <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+          </div>
+
+          <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+          <br>
+          <div class="linksOng ">
+              <img src="/imgs/dash.png" alt="">
+              <li><a href="/dashOng">Dashboard</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/animaisMenu.png" alt="">
+              <li><a href="/animaisOng">Animais</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/localizacaoOng.png" alt="">
+              <li><a href="/localizacao">Localização</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/publicidadeOng.png" alt="">
+              <li><a href="/publicidade">Publicidade</a></li>
+          </div>
+
+          <div class="linksOng ativo" id="ativo">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/postagens">Postagens</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/userOng.png" alt="">
+              <li><a href="/perfilOng">Perfil</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/feed">Feed</a></li>
+          </div>
+
+      </div>
+
+
+        <!-- Conteudo Principal - Perfil -->
+         <div class="containerPerfil">
+            <h1 class="tituloPerfil">Perfil ONG</h1>
+            <br>
+            
+  <div class="card">
+
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="info">Informações ong</div>
+      <div class="tab" data-tab="contato">Contato</div>
+    </div>
+
+    <!-- Conteúdo da aba "Informações ONG" -->
+    <div class="tab-content active" id="info">
+      <div class="profile-header">
+        <img src="/imgs/perfilOng/fotoPerfilOng.png" alt="Logo ONG">
+        <div>
+          <p><strong>Ong Animalar</strong></p>
+          <p>animalar44@gmail.com</p>
+        </div>
+        <button>Editar foto</button>
+      </div>
+
+      <form>
+        <label>Nome</label>
+        <input type="text" placeholder="Nome da ONG">
+
+        <label>Descrição/Missão</label>
+        <textarea placeholder="Digite a missão da ONG"></textarea>
+
+        <label>Ano de fundação</label>
+        <input type="text" placeholder="dd/mm/aaaa">
+
+        <button type="button" class="save-btn">SALVAR</button>
+      </form>
+    </div>
+
+    <!-- Conteúdo da aba "Contato" -->
+    <div class="tab-content" id="contato">
+      <form>
+        <label>Contato</label>
+        <input type="text" placeholder="Nome do responsável">
+
+        <label>Email</label>
+        <input type="email" placeholder="email@exemplo.com">
+
+        <label>Telefone</label>
+        <input type="text" placeholder="(xx) xxxxx-xxxx">
+
+        <label>Endereço</label>
+        <input type="text" placeholder="Rua, número, cidade, estado">
+
+        <button type="button" class="save-btn">SALVAR</button>
+      </form>
+    </div>
+  </div>
+
+         </div>
+
+
+
+    </div>
+
+
+   
+
+</body>
+<script src="/js/menuDash.js"></script>
+<script src="/js/perfilOng.js"></script>
+</html>

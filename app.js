@@ -88,11 +88,18 @@ app.get("/loginUsuario", (req, res) => {
 
 
 
-//area de login
+//perfis
+app.get("/perfilOng", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "perfilOng.html"));
+});
 
+app.get("/perfilAdm", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "perfilAdm.html"));
+});
 
-
-
+app.get("/perfilUsuario", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "perfilUsuario.html"));
+});
 
 
 
