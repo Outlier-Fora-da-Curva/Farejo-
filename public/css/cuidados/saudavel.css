@@ -1,0 +1,31 @@
+#warning {
+    width: 40px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+#dicasSaudaveis {
+    gap: 70px;
+    background-color: #fff5e9;
+    box-shadow: none;
+    padding: 5px 0;
+}
+
+.infos {
+   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.subTituloComidas{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(36, 12, 0);
+    width: 80%;
+}
+
+#ultima {
+    margin-bottom: 40px;
+}

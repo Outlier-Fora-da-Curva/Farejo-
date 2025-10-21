@@ -1,0 +1,12 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.desenvolvimento{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; 
+    width: 100%;
+    color: chocolate;
+}
