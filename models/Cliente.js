@@ -12,7 +12,7 @@ const Cliente = db.define("clientes", {
     allowNull: false
   },
   cpf: {
-    type: Sequelize.CHAR(11),
+    type: Sequelize.CHAR(14),
     allowNull: false,
     unique: true
   },
@@ -26,7 +26,7 @@ const Cliente = db.define("clientes", {
     allowNull: false
   },
   cep: {
-    type: Sequelize.CHAR(8)
+    type: Sequelize.CHAR(11)
   },
   rua: {
     type: Sequelize.STRING(100)

@@ -10,7 +10,6 @@ export function interacoes(app, __dirname) {
                 contagem: contagemUser.count + contagemOng.count,
             };
             res.json(contagem);
-            console.log(contagemUser);
         } catch (err) {
             res.status(500).json({ error: err.message });
         }

@@ -376,13 +376,13 @@
                     </div>
 
                     <!-- Usuários -->
-                    <div class="colunaPerfil">
+                    <div class="colunaPerfil" id="perfilUsuario">
                         <h1 class="tituloDash">Perfis dos Usuários</h1>
                         <div class="cardVagas">
                             <div class="ladoA">
-                                <h2 class="subtituloDash"><b>Maria Oliveira</b></h2>
-                                <h3><b>Email: </b> maria@email.com</h3>
-                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <h2 class="subtituloDash" id="nomeUser"><b>Maria Oliveira</b></h2>
+                                <h3><b>Email: </b> <span id="emailUser"> maria@email.com</span></h3>
+                                <h3><b>Local: </b> <span id="localUser"> São Paulo/SP</span></h3>
                                 <h3><b>Descrição: </b> Interessada em adoção de cães de pequeno porte.</h3>
                             </div>
                             <div class="ladoB">
@@ -393,6 +393,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="cardVagas">
                             <div class="ladoA">
@@ -496,6 +497,7 @@
     <!-- Funcões -->
     <script src="/js/funcoes/dashAdm/contagemDash.js"></script>
     <script src="/js/funcoes/dashAdm/graficoLinha.js"></script>
+    <script src="/js/funcoes/dashAdm/dashAdmPerfis.js"></script>
 </body>
 
 </html>

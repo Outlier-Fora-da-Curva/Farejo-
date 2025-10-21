@@ -73,10 +73,6 @@ app.get("/publicidade", (req, res) => {
 
 
 
-// Rotas de cadastro
-
-
-
 // Rotas estaticas de login
 app.get("/loginAdm", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "loginAdm.html"));
