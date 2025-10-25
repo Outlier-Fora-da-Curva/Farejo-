@@ -37,7 +37,7 @@
 
           <div class="linksOng">
               <img src="/imgs/localizacaoOng.png" alt="">
-              <li><a href="/localizacao">Localização</a></li>
+              <li><a href="/localizacaoOng">Localização</a></li>
           </div>
 
           <div class="linksOng">
@@ -69,71 +69,75 @@
             <div class="funcAnimais">
 
                 <div class="modal-editar">
-                    <button class="btnFuncao" onclick="openModal('modalAnimal1')">Cadastrar animal</button>
-                    <dialog id="modalAnimal1" class="modal">
-                        <h1>Cadastrar animal</h1>
-                        <form method="dialog" class="conteudo-modal">
-                            <div class="lado-esquerdo">
-                                <img src="/imgs/userPet.png" alt="Prévia" class="img-preview">
-                                <label class="btn-upload">
-                                    + Adicionar imagem
-                                    <input type="file" hidden>
-                                </label>
-                            </div>
+                <button class="btnFuncao" onclick="openModal('modalAnimal1')">Cadastrar animal</button>
 
-                            <div class="lado-direito">
-                                <div class="grade-form">
-                                    <label>Raça:
-                                        <input type="text" name="raca">
-                                    </label>
-                                    <label>Sexo:
-                                        <select name="sexo">
-                                            <option>Macho</option>
-                                            <option>Fêmea</option>
-                                        </select>
-                                    </label>
-                                    <label>Idade:
-                                        <input type="text" name="idade">
-                                    </label>
-                                    <label>Porte:
-                                        <select name="porte">
-                                            <option>Pequeno</option>
-                                            <option>Médio</option>
-                                            <option>Grande</option>
-                                        </select>
-                                    </label>
-                                    <label>Castrado:
-                                        <select name="castrado">
-                                            <option>Sim</option>
-                                            <option>Não</option>
-                                        </select>
-                                    </label>
-                                    <label>Animal:
-                                        <select name="animal">
-                                            <option>Cachorro</option>
-                                            <option>Gato</option>
-                                        </select>
-                                    </label>
-                                    <label>Vacinado:
-                                        <select name="vacinado">
-                                            <option>Sim</option>
-                                            <option>Não</option>
-                                        </select>
-                                    </label>
-                                    <label class="full">ONG:
-                                        <input type="text" name="ong">
-                                    </label>
-                                </div>
-                            </div>
-                        </form>
+                <dialog id="modalAnimal1" class="modal">
+                    <h1>Cadastrar animal</h1>
 
-                        <div class="rodape-form">
-                            <button type="submit" class="btn-confirmar">CADASTRAR</button>
-                            <button type="button" class="btn-cancelar"
-                                onclick="closeModal('modalAnimal1')">CANCELAR</button>
+                    <!-- Formulário -->
+                    <form action="/cadastrarAnimaisOng" method="POST" enctype="multipart/form-data" class="conteudo-modal">
+                    <div class="lado-esquerdo">
+                        <img src="/imgs/userPet.png" alt="Prévia" class="img-preview" id="previewAnimal1">
+                        <label class="btn-upload">
+                        + Adicionar imagem
+                        <input type="file" name="profile_pic" hidden id="inputImagemAnimal1">
+                        </label>
+                    </div>
+
+                    <div class="lado-direito">
+                        <div class="grade-form">
+                        <label>Raça:
+                            <input type="text" name="raca">
+                        </label>
+                        <label>Sexo:
+                            <select name="sexo">
+                            <option>Macho</option>
+                            <option>Fêmea</option>
+                            </select>
+                        </label>
+                        <label>Idade:
+                            <input type="text" name="idade">
+                        </label>
+                        <label>Porte:
+                            <select name="porte">
+                            <option>Pequeno</option>
+                            <option>Médio</option>
+                            <option>Grande</option>
+                            </select>
+                        </label>
+                        <label>Castrado:
+                            <select name="castrado">
+                            <option>Sim</option>
+                            <option>Não</option>
+                            </select>
+                        </label>
+                        <label>Animal:
+                            <select name="animal">
+                            <option>Cachorro</option>
+                            <option>Gato</option>
+                            </select>
+                        </label>
+                        <label>Vacinado:
+                            <select name="vacinado">
+                            <option>Sim</option>
+                            <option>Não</option>
+                            </select>
+                        </label>
+                        <label class="full">ONG:
+                            <input type="text" name="ong">
+                        </label>
                         </div>
-                    </dialog>
+                    </div>
+
+                    <!-- Botões DENTRO do form -->
+                    <div class="rodape-form">
+                        <button type="submit" class="btn-confirmar">CADASTRAR</button>
+                        <button type="button" class="btn-cancelar" onclick="closeModal('modalAnimal1')">CANCELAR</button>
+                    </div>
+                    </form>
+                </dialog>
                 </div>
+
 
                 <div class="excluirAnimal">
                     <button class="btnFuncao" onclick="openModal('excluir')">Excluir animal</button>
@@ -255,60 +259,59 @@
                         <div class="modal-editar">
                             <button class="verMais" onclick="openModal('modalAnimal1')">Editar animal</button>
                             <dialog id="modalAnimal1" class="modal">
-                                <form method="dialog" class="conteudo-modal">
-                                    <div class="lado-esquerdo">
-                                        <img src="/imgs/userPet.png" alt="Prévia" class="img-preview">
-                                        <label class="btn-upload">
-                                            + Adicionar imagem
-                                            <input type="file" hidden>
-                                        </label>
-                                    </div>
+                                <form method="POST" action="/cadastrarAnimaisOng" enctype="multipart/form-data">
+    <div class="lado-esquerdo">
+      <img src="/imgs/userPet.png" alt="Prévia" class="img-preview" id="preview">
+      <label class="btn-upload">
+        + Adicionar imagem
+        <input type="file" name="profile_pic" hidden id="inputImagem">
+      </label>
+    </div>
 
-                                    <div class="lado-direito">
-                                        <div class="grade-form">
-                                            <label>Raça:
-                                                <input type="text" name="raca">
-                                            </label>
-                                            <label>Sexo:
-                                                <select name="sexo">
-                                                    <option>Macho</option>
-                                                    <option>Fêmea</option>
-                                                </select>
-                                            </label>
-                                            <label>Idade:
-                                                <input type="text" name="idade">
-                                            </label>
-                                            <label>Porte:
-                                                <select name="porte">
-                                                    <option>Pequeno</option>
-                                                    <option>Médio</option>
-                                                    <option>Grande</option>
-                                                </select>
-                                            </label>
-                                            <label>Castrado:
-                                                <select name="castrado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label>Animal:
-                                                <select name="animal">
-                                                    <option>Cachorro</option>
-                                                    <option>Gato</option>
-                                                </select>
-                                            </label>
-                                            <label>Vacinado:
-                                                <select name="vacinado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label class="full">ONG:
-                                                <input type="text" name="ong">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
+    <div class="lado-direito">
+      <div class="grade-form">
+        <label>Raça: <input type="text" name="raca"></label>
+        <label>Sexo:
+          <select name="sexo">
+            <option>Macho</option>
+            <option>Fêmea</option>
+          </select>
+        </label>
+        <label>Idade: <input type="text" name="idade"></label>
+        <label>Porte:
+          <select name="porte">
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+          </select>
+        </label>
+        <label>Castrado:
+          <select name="castrado">
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </label>
+        <label>Animal:
+          <select name="animal">
+            <option>Cachorro</option>
+            <option>Gato</option>
+          </select>
+        </label>
+        <label>Vacinado:
+          <select name="vacinado">
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </label>
+        <label class="full">ONG: <input type="text" name="ong"></label>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <button type="submit" class="btn-salvar">Salvar</button>
+      <button type="button" class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+    </div>
+  </form>
 
                                 <div class="rodape-form">
                                     <button type="submit" class="btn-confirmar">SALVAR</button>
@@ -340,60 +343,30 @@
                         <div class="modal-editar">
                             <button class="verMais" onclick="openModal('modalAnimal1')">Editar animal</button>
                             <dialog id="modalAnimal1" class="modal">
-                                <form method="dialog" class="conteudo-modal">
-                                    <div class="lado-esquerdo">
-                                        <img src="/imgs/userPet.png" alt="Prévia" class="img-preview">
-                                        <label class="btn-upload">
-                                            + Adicionar imagem
-                                            <input type="file" hidden>
-                                        </label>
-                                    </div>
+                                // ...existing code...
+                            <form id="formCadastro" action="/animaisOng/cadastrar" method="POST" enctype="multipart/form-data" class="conteudo-modal">
+                            <div class="lado-esquerdo">
+                                <img src="/imgs/userPet.png" alt="Prévia" class="img-preview">
+                                <label class="btn-upload">
+                                + Adicionar imagem
+                                <input id="profile_pic" name="profile_pic" type="file" accept="image/*" hidden>
+                                </label>
+                            </div>
 
-                                    <div class="lado-direito">
-                                        <div class="grade-form">
-                                            <label>Raça:
-                                                <input type="text" name="raca">
-                                            </label>
-                                            <label>Sexo:
-                                                <select name="sexo">
-                                                    <option>Macho</option>
-                                                    <option>Fêmea</option>
-                                                </select>
-                                            </label>
-                                            <label>Idade:
-                                                <input type="text" name="idade">
-                                            </label>
-                                            <label>Porte:
-                                                <select name="porte">
-                                                    <option>Pequeno</option>
-                                                    <option>Médio</option>
-                                                    <option>Grande</option>
-                                                </select>
-                                            </label>
-                                            <label>Castrado:
-                                                <select name="castrado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label>Animal:
-                                                <select name="animal">
-                                                    <option>Cachorro</option>
-                                                    <option>Gato</option>
-                                                </select>
-                                            </label>
-                                            <label>Vacinado:
-                                                <select name="vacinado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label class="full">ONG:
-                                                <input type="text" name="ong">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="lado-direito">
+                                <div class="grade-form">
+                                <label>Raça: <input type="text" name="raca"></label>
+                                <!-- ... outros campos com name ... -->
+                                <label class="full">ONG: <input type="text" name="ong"></label>
+                                </div>
+                            </div>
+
+                            <div class="rodape-form">
+                                <button type="submit" class="btn-confirmar">CADASTRAR</button>
+                                <button type="button" class="btn-cancelar" onclick="closeModal('modalAnimal1')">CANCELAR</button>
+                            </div>
+                            </form>
+
 
                                 <div class="rodape-form">
                                     <button type="submit" class="btn-confirmar">SALVAR</button>
@@ -425,67 +398,69 @@
                         <div class="modal-editar">
                             <button class="verMais" onclick="openModal('modalAnimal1')">Editar animal</button>
                             <dialog id="modalAnimal1" class="modal">
-                                <form method="dialog" class="conteudo-modal">
+                                <h1>Cadastrar animal</h1>
+
+                                <form action="/cadastrarAnimaisOng" method="POST" enctype="multipart/form-data" class="conteudo-modal">
+                                    <div class="form-linhas">
                                     <div class="lado-esquerdo">
-                                        <img src="/imgs/userPet.png" alt="Prévia" class="img-preview">
+                                        <img src="/imgs/userPet.png" alt="Prévia" class="img-preview" id="previewAnimal1">
                                         <label class="btn-upload">
-                                            + Adicionar imagem
-                                            <input type="file" hidden>
+                                        + Adicionar imagem
+                                        <input type="file" name="profile_pic" hidden id="inputImagemAnimal1">
                                         </label>
                                     </div>
 
                                     <div class="lado-direito">
                                         <div class="grade-form">
-                                            <label>Raça:
-                                                <input type="text" name="raca">
-                                            </label>
-                                            <label>Sexo:
-                                                <select name="sexo">
-                                                    <option>Macho</option>
-                                                    <option>Fêmea</option>
-                                                </select>
-                                            </label>
-                                            <label>Idade:
-                                                <input type="text" name="idade">
-                                            </label>
-                                            <label>Porte:
-                                                <select name="porte">
-                                                    <option>Pequeno</option>
-                                                    <option>Médio</option>
-                                                    <option>Grande</option>
-                                                </select>
-                                            </label>
-                                            <label>Castrado:
-                                                <select name="castrado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label>Animal:
-                                                <select name="animal">
-                                                    <option>Cachorro</option>
-                                                    <option>Gato</option>
-                                                </select>
-                                            </label>
-                                            <label>Vacinado:
-                                                <select name="vacinado">
-                                                    <option>Sim</option>
-                                                    <option>Não</option>
-                                                </select>
-                                            </label>
-                                            <label class="full">ONG:
-                                                <input type="text" name="ong">
-                                            </label>
+                                        <label>Nome: <input type="text" name="nome"></label>
+                                        <label>Raça: <input type="text" name="raca"></label>
+                                        <label>Sexo:
+                                            <select name="sexo">
+                                            <option>Macho</option>
+                                            <option>Fêmea</option>
+                                            </select>
+                                        </label>
+                                        <label>Idade: <input type="text" name="idade"></label>
+                                        <label>Porte:
+                                            <select name="porte">
+                                            <option>Pequeno</option>
+                                            <option>Médio</option>
+                                            <option>Grande</option>
+                                            </select>
+                                        </label>
+                                        <label>Castrado:
+                                            <select name="castrado">
+                                            <option>Sim</option>
+                                            <option>Não</option>
+                                            </select>
+                                        </label>
+                                        <label>Animal:
+                                            <select name="animal">
+                                            <option>Cachorro</option>
+                                            <option>Gato</option>
+                                            </select>
+                                        </label>
+                                        <label>Vacinado:
+                                            <select name="vacinado">
+                                            <option>Sim</option>
+                                            <option>Não</option>
+                                            </select>
+                                        </label>
+                                        <label class="full">ID da ONG: 
+                                            <input type="number" name="idOng" value="1" readonly>
+                                        </label>
                                         </div>
                                     </div>
-                                </form>
+                                    </div>
 
-                                <div class="rodape-form">
-                                    <button type="submit" class="btn-confirmar">SALVAR</button>
-                                    <button type="button" class="btn-cancelar"
-                                        onclick="closeModal('modalAnimal1')">CANCELAR</button>
-                                </div>
+                                    <!-- 👇 Botões ficam FORA da parte lado a lado -->
+                                    <div class="rodape-form">
+                                    <button type="submit" class="btn-confirmar">CADASTRAR</button>
+                                    <button type="button" class="btn-cancelar" onclick="closeModal('modalAnimal1')">CANCELAR</button>
+                                    </div>
+                                </form>
                             </dialog>
+
                         </div>
 
                     </div>
@@ -498,6 +473,8 @@
 
     <script src="/js/menuDash.js"></script>
     <script src="/js/modais.js"></script>
+    <script src="/js/selectArquivo.js"></script>
+    <script src="/js/funcoes/dashOng/cadastrarAnimais.js"></script>
 </body>
 
 </html>

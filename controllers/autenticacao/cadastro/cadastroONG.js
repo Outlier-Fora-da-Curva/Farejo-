@@ -1,6 +1,9 @@
 import path from "path";
 import Ong from '../../../models/Ong.js';
 
+//import nodemailer from 'nodemailer';
+
+
 export function cadastroOng(app, __dirname) {
     //ong
     app.get("/cadastroOng", (req, res) => {
@@ -24,7 +27,8 @@ export function cadastroOng(app, __dirname) {
                 UF: req.body.uf,
                 complemento: req.body.complemento,
                 bairro: req.body.bairro,
-                descricao: req.body.descricao
+                descricao: req.body.descricao,
+                status: "pendente"
             });
             res.redirect('/loginOng?sucesso=1');
 

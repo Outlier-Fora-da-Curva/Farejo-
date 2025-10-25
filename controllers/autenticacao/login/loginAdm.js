@@ -1,6 +1,6 @@
 import Administrador from '../../../models/Administrador.js';
 
-export function loginUser(app, __dirname) {
+export function loginAdm(app, __dirname) {
     // login adm
     app.post("/loginAdm", async (req, res) => {
     

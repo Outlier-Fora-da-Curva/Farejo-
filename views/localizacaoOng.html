@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Localização da ONG</title>
+  <link rel="stylesheet" href="/css/localizacaoOng.css">
+</head>
+<body>
+
+    <div class="containerPerfilOng">
+        
+        <!-- Navbar Lateral -->
+        <div class="navbarOng recolhido">
+          <div class="btn-abrir">
+              <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+          </div>
+
+          <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+          <br>
+          <div class="linksOng ">
+              <img src="/imgs/dash.png" alt="">
+              <li><a href="/dashOng">Dashboard</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/animaisMenu.png" alt="">
+              <li><a href="/animaisOng">Animais</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/localizacaoOng.png" alt="">
+              <li><a href="/localizacaoOng">Localização</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/publicidadeOng.png" alt="">
+              <li><a href="/publicidade">Publicidade</a></li>
+          </div>
+
+          <div class="linksOng ativo" id="ativo">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/postagens">Postagens</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/userOng.png" alt="">
+              <li><a href="/perfilOng">Perfil</a></li>
+          </div>
+
+          <div class="linksOng">
+              <img src="/imgs/postagens.png" alt="">
+              <li><a href="/feed">Feed</a></li>
+          </div>
+
+      </div>
+
+
+
+
+
+      
+
+<div class="container">
+    <div class="ong-card">
+      <div class="ong-info">
+        <img src="/imgs/localizacaoOng/fotoPerfilOng.png" alt="Imagem da ONG" id="ong-imagem">
+        <div class="details">
+          <h3 id="ong-nome">ONG AJUDA PET</h3>
+          <p id="ong-endereco">R. Luís Mateus, 2322 - Vila Cosmopolita, São Paulo - SP</p>
+          <p><span class="status" id="ong-status">ABERTO</span> • Fecha <span id="ong-horario">00:00</span></p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <p>📞 <span id="ong-telefone">+55 (11) 98345-7349</span></p>
+        <p>✉️ <span id="ong-email">ajudapet56@gmail.com</span></p>
+      </div>
+
+      <button class="edit-btn" id="editBtn">EDITAR</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <!-- Modal -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close-btn" id="closeModal">&times;</button>
+
+    <form id="editForm">
+      <label>Nome da ONG</label>
+      <input type="text" id="edit-nome" name="nome" />
+
+      <label>Email</label>
+      <input type="email" id="edit-email" name="email" />
+
+      <label>Telefone</label>
+      <input type="text" id="edit-telefone" name="telefone" />
+
+      <label>Horário de funcionamento</label>
+      <input type="text" id="edit-horario" name="horario" />
+
+      <div class="row">
+        <div class="col">
+          <label>Rua</label>
+          <input type="text" id="edit-rua" name="rua" />
+        </div>
+        <div class="col">
+          <label>Número</label>
+          <input type="text" id="edit-numero" name="numero" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>Bairro</label>
+          <input type="text" id="edit-bairro" name="bairro" />
+        </div>
+        <div class="col">
+          <label>Cidade</label>
+          <input type="text" id="edit-cidade" name="cidade" />
+        </div>
+        <div class="col">
+          <label>Estado</label>
+          <input type="text" id="edit-estado" name="estado" />
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="save-btn">SALVAR</button>
+    </form>
+  </div>
+</div>
+
+
+<script src="/js/menuDash.js"></script>
+<script src="/js/localizacaoOng.js"></script>
+</body>
+</html>

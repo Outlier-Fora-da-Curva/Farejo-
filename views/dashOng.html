@@ -48,7 +48,7 @@
 
           <div class="linksOng">
               <img src="/imgs/userOng.png" alt="">
-              <li><a href="/perfilOng">Perfil</a></li>
+              <li><a href="/perfil">Perfil</a></li>
           </div>
 
           <div class="linksOng">
@@ -61,13 +61,32 @@
 
         <div class="dash">
             <div class="coluna1">
-                <h1 class="tituloDash">Gráfico de engajamento</h1>
+                <h1 class="tituloDash">Dashboard</h1>
+
+                <img src="/imgs/grafico.png" alt="" class="graficoEngajamento">
+
+                <img src="/imgs/outGraficos.png" alt="" class="outGraficos">
+
+                <!-- <div class="cardApresentacao">
+                    <h1 class="apresentacao">Seja bem-vindo</h1>
+                    <h2 class="descApresentacao">Aqui você poderá gerenciar suas publicações, acompanhar campanhas e feiras de adoção, atualizar
+                         informações sobre sua ONG e visualizar o engajamento das suas ações. Tudo de forma prática e organizada, para que você possa 
+                         focar no que realmente importa: cuidar e promover o bem-estar dos animais que você ajuda.</h2>
+                </div> -->
+
+
+
+
+
+
+
                 <div class="graficoEngajamento">
-                    <img src="/imgs/grafico.png" alt="">
+                    
                 </div>
 
                 <br>
 
+                <!--
                 <div class="vagas">
                     <h1 class="tituloDash">Vagas</h1>
                     <div class="cardVagas">
@@ -133,28 +152,51 @@
 
                     <br>
                 </div>
+                -->
             </div>
 
             <div class="coluna2">
                 <!-- Seguidores -->
-                <div class="card seguidores">
-                <div>
-                    <p>Seguidores</p>
-                </div>
-                <div>
-                    <span class="numero">24</span>
-                    <span class="crescimento">▲ 5%</span>
-                </div>
+                <div class="auxCol2">
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Número total de postagens</b>
+                        <div>
+                            <span class="numero" data-target="20">20</span>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Post mais curtido -->
+                    <div class="card2" id="postMaisFavoritado">
+                        <b class="titulo">Post mais favoritado</b>
+                        <img class="imgMaisFavoritado" src="/imgs/landingPage/vacinacao.png" alt="Post">
+                        <div class="info">
+                            
+                            <p class="descricaoMaisFavoritado">Campanha </p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Post mais curtido -->
-                <div class="card post">
-                <img src="/imgs/vacinacao.png" alt="Post">
-                <div class="info">
-                    <p class="titulo">Post mais curtido</p>
-                    <p class="descricao">Dia de vacinação Pet</p>
+
+                <div class="auxCol2">
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Número de animais adotados</b>
+                        <div>
+                            <span class="numero" data-target="20">95</span>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Post mais curtido -->
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Número total de animais aguardando por adoção</b>
+                        <div>
+                            <span class="numero" data-target="20">130</span>
+                        </div>
+                    
+                    </div>
                 </div>
-                </div>
+                
 
                 <!-- Funcionários -->
                 <div class="card funcionarios">
@@ -213,6 +255,60 @@
                     </label>
                     </div>
                 </div>
+
+                <div class="funcionario">
+                    <div class="perfil">
+                    <img src="/imgs/user3.jpeg" alt="Foto">
+                    <div class="dados">
+                        <p class="nome">Gabriela Silva</p>
+                        <p>Gestão</p>
+                        <p>Admissão: 20/11/2022</p>
+                    </div>
+                    </div>
+                    <div class="acoes">
+                    <button title="Ver currículo">📄</button>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="funcionario">
+                    <div class="perfil">
+                    <img src="/imgs/user1.jpeg" alt="Foto">
+                    <div class="dados">
+                        <p class="nome">Luana Souza</p>
+                        <p>Designer</p>
+                        <p>Admissão: 12/02/2023</p>
+                    </div>
+                    </div>
+                    <div class="acoes">
+                    <button title="Ver currículo">📄</button>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="funcionario">
+                    <div class="perfil">
+                    <img src="/imgs/user2.jpeg" alt="Foto">
+                    <div class="dados">
+                        <p class="nome">Rodrigo Santiago</p>
+                        <p>Desenvolvedor</p>
+                        <p>Admissão: 05/08/2022</p>
+                    </div>
+                    </div>
+                    <div class="acoes">
+                    <button title="Ver currículo">📄</button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                </div>
                 </div>
 
             </div>
@@ -220,5 +316,7 @@
     </div>
 
     <script src="/js/menuDash.js"></script>
+    <script src="/js/dashOng.js"></script>
+    
 </body>
 </html>

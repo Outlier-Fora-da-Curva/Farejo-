@@ -176,24 +176,12 @@ body {
     border: 1px solid #8b5e34; 
  
 }
-
-/* Seguidores */
-.seguidores {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Oswald", sans-serif;
-}
     
-.seguidores .numero {
-    font-size: 26px;
+.card2 .numero {
+    font-size: 60px;
     font-weight: bold;
-}
-
-.seguidores .crescimento {
-    color: green;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
 }
 
 /* Post mais curtido */
@@ -215,9 +203,11 @@ body {
     margin: 2px 0;
 }
     
-.post .titulo {
-    font-size: 14px;
+.card2 .titulo {
+    font-size: 16px;
     font-weight: bold;
+    margin-bottom: 10px;
+    
 }
     
 .post .descricao {
@@ -225,6 +215,30 @@ body {
     color: #666;
 }
 
+.card2{
+    width: 50%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #f5f0e6;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border: 1px solid #8b5e34; 
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+}
+
+.auxCol2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
 /* Funcionários */
 .funcionarios h3 {
     margin-bottom: 10px;
@@ -336,4 +350,42 @@ input:checked + .slider:before {
 
 b {
     color: #542602;
+}
+
+.cardApresentacao {
+    border-radius: 30px;
+    background-color: rgb(37, 37, 113);
+    width: 80%;
+    height: 260px;
+    color: #fff;
+    box-shadow: 2px 2px 4px #00000081;
+    padding: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: "Oswald", sans-serif;
+}
+
+.apresentacao {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+}
+
+.descApresentacao {
+    font-size: 18px;
+}
+
+.imgMaisFavoritado{
+    width: 80px;
+    height: 70px;
+}
+
+.graficoEngajamento {
+    width: 600px;
+    height: 340px;
+}
+
+.outGraficos {
+    width: 600px;
+    height: 750px;
 }

@@ -20,13 +20,23 @@ const Ong = db.define("ongs", {
     type: Sequelize.STRING(255),
     allowNull: false
   },
-  CNPJ: {
+  nomeResponsavel: {
+    type: Sequelize.STRING(100),
+    allowNull: false
+  },
+  cpfResponsavel: {
     type: Sequelize.CHAR(14),
     allowNull: false,
     unique: true
   },
   telefoneContato: {
-    type: Sequelize.STRING(20)
+    type: Sequelize.CHAR(12),
+    allowNull: false
+  },
+  CNPJ: {
+    type: Sequelize.CHAR(18),
+    allowNull: false,
+    unique: true
   },
   CEP: {
     type: Sequelize.CHAR(8)
@@ -51,11 +61,14 @@ const Ong = db.define("ongs", {
   },
   descricao: {
     type: Sequelize.TEXT
+  },
+  status: {
+    type: Sequelize.STRING,
+    defaultValue: "pendente" 
   }
 
 });
 
 Ong.sync();
-// Ong.sync({ alter: true});
 
 export default Ong;

@@ -169,3 +169,179 @@ input {
     font-family: "Titan One", sans-serif;
     color: #7B3C0A;
 }
+
+/*********************************************/
+/* Parceiros */
+.carrossel {
+    align-items: center;
+    background: transparent;
+    display: flex;
+    margin-left: 8%;
+    margin-right: 8%;
+    justify-content: right;
+}
+  
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+}
+  
+.parceiros .slider {
+    background: transparent;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    margin-bottom: 20px;
+}
+  
+.dark .parceiros .slider {
+    background: #2d2d3e;
+}
+
+.parceiros .slider::before,
+.parceiros .slider::after {
+    background: transparent;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  
+.parceiros .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+  
+.parceiros .slider::before {
+    left: 0;
+    top: 0;
+}
+  
+.parceiros .slider .slide-track {
+    animation: scroll 60s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+  
+.parceiros .slider .slide {
+    height: 100px;
+    width: 250px;
+    margin: 0px 20px;
+}
+
+
+/* Estilo lista de ongs */
+.listaOngs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.ongParceira {
+  display: flex;
+  align-items: center;
+  background-color: #F5E1C5;
+  border: 2px solid #7B3C0A;
+  border-radius: 40px;
+  padding: 6px 10px;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.ongParceira:hover {
+  background-color: #E2AC7F;
+  transform: scale(1.03);
+}
+
+.imgOngParceira {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1.5px solid #7B3C0A;
+  background-color: #fff;
+}
+
+.nomeOngParceira {
+  font-family: "Oswald", sans-serif;
+  color: #7B3C0A;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.perfil:hover {
+    width: 100%;
+    cursor: pointer;
+}
+
+.perfil a:hover {
+    text-decoration:underline;
+}
+
+.imgPerfil {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+} 
+
+.nomePerfil, .tituloPost{
+    font-family: "Oswald", sans-serif;
+    color: #7B3C0A;
+    font-size: 20px;
+
+}
+
+.infoPost, .descPost{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+
+}
+
+.col1P {
+    display: flex;
+    padding: 80px;
+    padding-top: 20px;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.perfill {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.imgsPost img {
+    width: 150px;
+    height: 150px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+

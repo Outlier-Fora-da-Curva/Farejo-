@@ -19,11 +19,11 @@ export function loginOng(app, __dirname) {
         req.session.cnpj = ong.cnpj;
         res.redirect('/dashOng');
         } else {
-        res.redirect('/loginOng');
+        res.redirect('http://localhost:3000/loginOng');
         }
     } catch (err) {
         console.error("Erro na consulta ao banco de dados:", err);
-        res.redirect("/loginOng");
+        res.redirect("http://localhost:3000/loginOng");
     }
     });
 }

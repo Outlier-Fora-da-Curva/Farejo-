@@ -1,6 +1,7 @@
 import express from 'express';
 import session from 'express-session';
 import path from 'path';
+import multer from "multer";
 import { fileURLToPath } from "url";
 import defineRoutes from "./controllers/rotas.js";
 
@@ -11,15 +12,28 @@ const __dirname = path.dirname(__filename);
 import Cliente from './models/Cliente.js';
 import Administrador from './models/Administrador.js';
 import Ong from './models/Ong.js';
+import Animal from './models/Animais.js';
+import Evento from './models/Eventos.js';
+import Publicacao from './models/Publicacoes.js';
 
 // importação do banco
 import db from './models/db.js';
 // import conexao from './conexao.js'; // se precisar depois
 
 const app = express();
+app.use(express.json({ limit: '50mb' })); 
+app.use(express.urlencoded({ extended: true }));
 
 //chama os arquivos css, js e img
 app.use(express.static(path.join(__dirname, "public")));
+
+// Multer: salvar arquivos em "uploads/"
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, path.join(process.cwd(), "uploads")),
+  filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
+});
+
+const upload = multer({ storage });
 
 
 app.use(session({
@@ -59,6 +73,11 @@ app.get("/dashOng", (req, res) => {
 //animais
 app.get("/animaisOng", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "animaisOng.html"));
+});
+
+//localizacao
+app.get("/localizacaoOng", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "localizacaoOng.html"));
 });
 
 //feed
@@ -145,6 +164,7 @@ app.get('/session', (req, res) => {
 //porta q vai rodar
 const port = 3000;
 
-app.listen(port, ()=> [
-    console.log(`Servidor rodando em http://localhost:${port}`)
-]);
+// ...existing code...
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
