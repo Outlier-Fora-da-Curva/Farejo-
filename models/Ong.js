@@ -2,6 +2,7 @@ import Sequelize from 'sequelize';
 import db from './db.js';
 
 const Ong = db.define("ongs", {
+  
   idOng: {
     type: Sequelize.INTEGER,
     primaryKey: true,
@@ -68,6 +69,7 @@ const Ong = db.define("ongs", {
   }
 
 });
+
 
 Ong.sync();
 

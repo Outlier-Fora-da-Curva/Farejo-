@@ -3,7 +3,10 @@ import Sequelize from 'sequelize';
 const conn = new Sequelize("farejo", "root", "", {
     host: 'localhost',
     dialect: 'mysql',
-    port: 3307
+    port: 3307,
+    logging: (msg) => {
+    if (msg.includes('ERROR')) console.log(msg);
+    }
 });
 
 conn.authenticate()

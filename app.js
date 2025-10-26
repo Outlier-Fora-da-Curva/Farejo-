@@ -17,7 +17,10 @@ import Evento from './models/Eventos.js';
 import Publicacao from './models/Publicacoes.js';
 
 // importação do banco
+
+
 import db from './models/db.js';
+await db.sync();
 // import conexao from './conexao.js'; // se precisar depois
 
 const app = express();
@@ -42,11 +45,9 @@ app.use(session({
     saveUninitialized: true
 }));
 
-
 //interpretar os dados do html
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 
 export { app };
 

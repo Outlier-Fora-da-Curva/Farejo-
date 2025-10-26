@@ -24,11 +24,50 @@ function criarPedidoCadastroOng() {
 
         </div>
 
-        <br>
-
 
     `;
 }
+
+async function aprovarOng(id) {
+    try {
+        const resposta = await fetch(`/aprovacao/aprovar/${id}`, {
+            method: 'POST'
+        });
+        const dados = await resposta.json();
+        if (dados.message === 1) {
+            alert('ONG aprovada com sucesso!');
+        } else {
+            alert('Erro ao aprovar ONG.');
+        }
+        location.reload();
+    } catch (erro) {
+        console.error('Erro ao aprovar ONG:', erro);
+    }
+}
+
+async function deletarOng(id, event) {
+    if (!confirm('Tem certeza que deseja excluir esta ONG?')) return;
+    try {
+        const resposta = await fetch(`/aprovacao/deletar/${id}`, {
+            method: 'DELETE'
+        });
+        const dados = await resposta.json();
+        if (resposta.ok) {
+            alert(dados.message || 'ONG excluída com sucesso!');
+
+            // 🔥 Remove o card visualmente
+            const card = event.target.closest('.card.aprovacoes');
+            if (card) card.remove();
+        } else {
+            console.error('Erro ao excluir ONG:', dados.error);
+        }
+    } catch (erro) {
+        console.error('Erro ao deletar ONG:', erro);
+    }
+}
+
+
+
 
 async function carregarPedidoCadastroOng() {
     try {
@@ -44,14 +83,20 @@ async function carregarPedidoCadastroOng() {
 
         dados.ongs.forEach(ong => {
             containerAprovacao.insertAdjacentHTML('beforeend', criarPedidoCadastroOng());
+
             const ultimoCard = containerAprovacao.lastElementChild;
-            
-            ultimoCard.querySelector('.nome-ong').textContent = ong.nome;
-            ultimoCard.querySelector('.email-ong').textContent = ong.email;
-            ultimoCard.querySelector('.cnpj-ong').textContent = ong.CNPJ;
-            ultimoCard.querySelector('.cpf-ong').textContent = ong.cpfResponsavel;
-            ultimoCard.querySelector('.cep-ong').textContent = ong.CEP;
-            ultimoCard.querySelector('.cidade-ong').textContent = `${ong.cidade}/${ong.UF}`;
+            ultimoCard.querySelector('.nome-ong').textContent = ' ' + ong.nomeOng;
+            ultimoCard.querySelector('.email-ong').textContent = ' ' + ong.email;
+            ultimoCard.querySelector('.cnpj-ong').textContent = ' ' + ong.CNPJ;
+            ultimoCard.querySelector('.cpf-ong').textContent = ' ' + ong.cpfResponsavel;
+            ultimoCard.querySelector('.cep-ong').textContent = ' ' + ong.CEP;
+            ultimoCard.querySelector('.cidade-ong').textContent = ' ' + `${ong.cidade}/${ong.UF}`;
+
+            const btnAprovar = ultimoCard.querySelector('.btn-approve');
+            const btnDeletar = ultimoCard.querySelector('.btn-delete');
+
+            btnAprovar.addEventListener('click', () => aprovarOng(ong.idOng));
+            btnDeletar.addEventListener('click', (event) => deletarOng(ong.idOng, event));
         });
 
     } catch (erro) {

@@ -10,7 +10,8 @@ export function loginOng(app, __dirname) {
         const ong = await Ong.findOne({
         where: {
             CNPJ: cnpj,
-            senha: password
+            senha: password,
+            status: 'aprovado'
         }
         });
 
