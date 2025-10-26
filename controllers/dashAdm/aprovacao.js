@@ -56,7 +56,12 @@ Agradecemos sua compreensão e desejamos muito sucesso nas suas ações em prol 
 
 Atenciosamente,
 Equipe Farejo`
-};
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+    });
 }
 
 export function aprovacao(app, __dirname) {

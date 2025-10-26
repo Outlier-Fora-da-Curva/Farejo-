@@ -28,18 +28,21 @@ function criarPedidoCadastroOng() {
     `;
 }
 
-async function aprovarOng(id) {
+async function aprovarOng(id, event) {
     try {
         const resposta = await fetch(`/aprovacao/aprovar/${id}`, {
             method: 'POST'
         });
         const dados = await resposta.json();
-        if (dados.message === 1) {
-            alert('ONG aprovada com sucesso!');
+        if (resposta.ok) {
+            alert(dados.message || 'ONG excluída com sucesso!');
+
+            // 🔥 Remove o card visualmente
+            const card = event.target.closest('.card.aprovacoes');
+            if (card) card.remove();
         } else {
-            alert('Erro ao aprovar ONG.');
+            console.error('Erro ao excluir ONG:', dados.error);
         }
-        location.reload();
     } catch (erro) {
         console.error('Erro ao aprovar ONG:', erro);
     }
@@ -95,7 +98,7 @@ async function carregarPedidoCadastroOng() {
             const btnAprovar = ultimoCard.querySelector('.btn-approve');
             const btnDeletar = ultimoCard.querySelector('.btn-delete');
 
-            btnAprovar.addEventListener('click', () => aprovarOng(ong.idOng));
+            btnAprovar.addEventListener('click', (event) => aprovarOng(ong.idOng, event));
             btnDeletar.addEventListener('click', (event) => deletarOng(ong.idOng, event));
         });
 
