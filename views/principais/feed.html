@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Feed</title>
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="/css/feed.css">
+    <link rel="stylesheet" href="/css/feedPrincipal.css">
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+    
+    <!-- Menu -->
+    <header>
+        <img src="/imgs/logoFarejo.png" alt="Logo Farejo" class="logo">
+
+        <nav>
+            <a href="/inicial">Início</a>
+            <a href="/feed">Feed</a>
+            <a href="/cuidadosPets">Cuidados</a>
+            <!-- <a href="/">Agenda</a>
+            <a href="/">Contato</a> -->
+        </nav>
+
+        <a href="/login" class="btnLogin"></a>
+
+        <!-- Botão Menu Hamburguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+
+    <!-- Feed -->
+    <div class="containerFeed">
+        <div class="filtrosFeed">
+            <form class="ordenar2">
+                <!-- limpar filtros -->
+                <h1 class="ord1">Filtrar por:</h1>
+                <ul class="ordenarOpc">
+                    <li class="ord active">
+                        <img src="/imgs/feed/tudo.png" alt="" class="iconFiltro">
+                        Tudo
+                    </li>
+
+                    <li class="ord">
+                        <img src="/imgs/animais.png" alt="" class="iconFiltro">
+                        Animais
+                    </li>
+
+                        <!--
+                        <ul class="tipoAnimal">
+                            <li><input type="radio" name="ordenacao" id="recentes" active>Todos</li>
+                            <li><input type="radio" name="ordenacao" id="recentes">Cachorros</li>
+                            <li><input type="radio" name="ordenacao" id="recentes">Gatos</li>
+                        </ul>
+                        -->
+                    <li class="ord">
+                        <img src="/imgs/eventos.png" alt="" class="iconFiltro">
+                        Eventos
+                    </li>
+                 
+                   <li class="ord">
+                        <img src="/imgs/campanhas.png" alt="" class="iconFiltro">
+                        Campanhas
+                    </li>
+                  
+                </ul>
+                
+                <br><br>
+
+                <ul class="ordenarOpc">
+                    <!-- <li class="ord">
+                        <a href="/chat">
+                        <img src="/imgs/feed/chat.png" alt="" class="iconFiltro">
+                        Chat
+                    </li> -->
+                 
+                   <li class="ord">
+                        <a href="/loginUsuario">
+                        <img src="/imgs/feed/log out.png" alt="" class="iconFiltro">
+                        Sair</a>
+                    </li>
+                </ul>
+                
+                
+            </form>
+
+            <br>
+
+            <div class="perfilUsuario">
+                <br>
+                <img src="/imgs/userA.png" alt="" class="fotoUsuario" id="imgUsuario">
+                <h1 class="nomeUsuario" id="nomeUsuario"></h1>
+                <!-- <button class="acessarPerfilUsuario"><a href="">Ver meu perfil</a></button> -->
+            </div>
+        </div>
+
+        <div class="feedPrincipal">
+            <!--
+            <form class="barraBusca" action="/action_page.php">
+                <input class="busca" type="search" placeholder="O que você procura.." name="search">
+                <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
+
+                
+            </form>-->
+            
+            <br>
+
+            <div class="propagandas">
+                <div class="carousel-container">
+
+
+                    <div class="cardProjeto cardProjeto1 active">
+                        <div class="content">
+                        <h1>Adote, não compre!</h1>
+                        <p>Milhares de peludos estão à espera de um lar.</p>
+                        <p>Faça parte da mudança: dê amor, receba amor! 💛</p>
+                        <button><a href="/perfilOng/1">Conhecer ong responsável</a></button>
+                        </div>
+                    </div>
+
+                    <div class="cardProjeto cardProjeto2">
+                        <div class="content">
+                        <h1>Campanha Reciclar é Cuidar!</h1>
+                        <p>A cada quilo de plástico doado, ajudamos uma ONG de proteção animal.</p>
+                        <p>Juntos pela natureza e pelos bichinhos 🌱🐾</p>
+                        <button><a href="/perfilOng/2">Conhecer ong responsável</a></button>
+                        </div>
+                    </div>
+
+                    <div class="cardProjeto cardProjeto3">
+                        <div class="content">
+                        <h1>Mutirão de Castração Gratuita!</h1>
+                        <p>02 e 03 de novembro — inscrições abertas.</p>
+                        <p>Evite o abandono. Cuide com amor 💕</p>
+                        <button><a href="/perfilOng/3">Conhecer ong responsável</a></button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="buttons">
+                    <button id="prevBtn">Anterior</button>
+                    <button id="nextBtn">Próximo</button>
+                </div>
+
+
+            </div>
+
+            
+            <!-- Parceiros -->
+            <div class="parceiros efeito5" id="parceiros">
+
+                <!-- Carrossel automático de parceiros -->
+                <div class="carrossel efeito-carrossel">
+                    <div class="slider">
+                        <div class="slide-track">
+                        <div class="slide">
+                            <img src="./imgs/parceiro1.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro2.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro3.png" height="60" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro4.png" height="70" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro5.png" height="70" width="150" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro6.png" height="70" width="180" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro1.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro2.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro3.png" height="70" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro4.png" height="60" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro5.png" height="70" width="150" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro6.png" height="70" width="180" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro1.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro2.png" height="100" width="200" margin="5" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./imgs/parceiro3.png" height="70" width="200" margin="5" alt="" />
+                        </div>
+                        
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--
+                <div class="post">
+                    <div class="col1P">
+                        <div class="perfill">
+                            <img src="/imgs/ong1.png" alt="" class="imgPerfil">
+                            <div class="infoPost">
+                                <a class="nomePerfil">Projeto Mi&Au</a>
+                                <h5>Há 5 horas</h5>
+                            </div>
+                        </div>
+                        
+
+                        <div class="imgsPost">
+                            <img src="/imgs/landingPage/multirao.png" alt="">
+                            <img src="/imgs/landingPage/feira.png" alt="">
+                        </div>
+
+                        <div class="textoPost">
+                            <h2 class="tituloPost">🐾 Evento de Adoção - Dê um lar, ganhe amor! 🐾</h2>
+                            <h3 class="descPost">
+                                Você está pronto para encontrar um novo melhor amigo?
+                            <br>
+                            Data: 24/10 às 15:00
+                            Local: Av. Brasil
+
+                            Mais de 900 cães e gatos resgatados estarão esperando por um lar cheio de amor. Todos castrados, vacinados e prontos para começar uma nova vida com você! 
+                            Adoção responsável salva vidas. Participe e ajude a espalhar essa ideia!
+                            </h3>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+                -->
+
+                <div class="linhaOngs">
+                    <h2 class="tituloFiltros" id="perfilOngs">Institiuições parceiras</h2>
+
+                    <br>
+
+                    <div class="swiper cardSol-wrapper" id="swiper">
+                        <ul class="swiper-wrapper cardSol-list">
+
+
+                        </ul>
+
+                        <br>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+        
+                    </div>
+
+                    <!-- Exemplo
+                    <div class="perfilOng swiper-slide">
+                        <div class="infosPrincipais">
+                            <img class="imgPerfil"></img>
+                            <h2 class="nomePerfil">Ampara animal</h2>
+                        </div>
+                        
+                        <div class="auxOng">
+                            <img src="/imgs/feed/localizacaoPerfil.png" alt="" class="localizacao">
+                            <h3 class="enderecoOng">hbrjknlkffffffffffffffffffkdlllllllllllllll</h3>
+                        </div>
+
+                        <button class="acessarOng">Conhecer ONG</button>
+
+                    </div>
+
+                    -->
+                </div>
+
+                <br><br>
+
+                <div class="linhaAnimais">
+                    <h2 class="tituloFiltros" id="perfilOngs">Conheça alguns amiguinhos que estão farejando um lar:</h2>
+                    <div class="containerAnimais" id="containerAnimais">
+                        
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="publicacoes" id="publicacoes">
+
+                </div>
+            
+        </div>
+
+        
+    </div>
+
+    <!-- Modal do animal -->
+    <div id="modalAnimal" class="modalAnimal">
+    <div class="modalContent">
+        <span class="closeModal">&times;</span>
+        <div class="modalImg">
+        <img id="modalAnimalFoto" src="" alt="">
+        </div>
+        <div class="modalInfos">
+        <h2 id="modalAnimalNome"></h2>
+        <p><strong>Raça:</strong> <span id="modalAnimalRaca"></span></p>
+        <p><strong>Idade:</strong> <span id="modalAnimalIdade"></span></p>
+        <p><strong>Sexo:</strong> <span id="modalAnimalSexo"></span></p>
+        <p><strong>Tipo:</strong> <span id="modalAnimalTipo"></span></p>
+        <p><strong>Porte:</strong> <span id="modalAnimalPorte"></span></p>
+        <p><strong>Castrado:</strong> <span id="modalAnimalCastrado"></span></p>
+        <p><strong>Vacinado:</strong> <span id="modalAnimalVacinado"></span></p>
+        <p><strong>História:</strong> <span id="modalAnimalHistoria"></span></p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        fetch('/user')
+        .then(res => res.json())
+        .then(data => {
+            if (data.nome) {
+            document.getElementById('nomeUsuario').innerText = data.nome;
+            document.getElementById('imgUsuario').src = data.imagem || '/imgs/userA.png';
+            }
+        })
+        .catch(err => console.error(err));
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Funcões -->
+    <script src="/js/funcoes/feed/colunaOngs.js"></script>
+    <script src="/js/funcoes/feed/linhaPets.js"></script>
+    <script src="/js/funcoes/feed/criarPublicacoes.js"></script>
+    <script src="/js/funcoes/feed/filtragem.js"></script>
+    <script src="/js/funcoes/feed/modalAnimais.js"></script>
+
+
+    <!-- <script src="/js/inicial.js"></script> -->
+    <script src="/js/feed.js"></script>
+    <script src="/js/propagandas.js"></script>
+</body>
+</html>

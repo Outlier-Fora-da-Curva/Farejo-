@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Animais</title>
+    <link rel="stylesheet" href="/css/dashOng.css">
+    <link rel="stylesheet" href="/css/animaisOng.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="stylesheet" href="/css/modais.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+    </div>
+
+
+    <!-- Funcionalidades -->
+    <div class="containerAnimais">
+
+        <div class="funcAnimais">
+
+            <div class="modal-editar">
+                <a href="/cadastroAnimal">
+                    <button class="btnFuncao">Cadastrar animal</button> 
+                </a>
+            </div>
+        
+        </div>
+
+        <br>
+
+        <div id="mensagem" style="color: rgb(9, 155, 9); font-size: 18px;"></div>
+
+        <br>
+
+        <div class="pets" id="pets">
+
+            <!-- <div class="selecionarPet">
+                <input type="checkbox" name="" id="">
+
+                <div class="cardPet">
+                    <div class="imgPet"><img src="/imgs/mike.png" alt=""></div>
+
+                    <div class="infosPet">
+                        <h2 class="nomePet"></h2>
+                        <h3 class="raca"></h3>
+                        <h3 class="idade"></h3>
+                    </div>
+
+                </div>
+            </div> -->
+
+
+        </div>
+
+    </div>
+
+    <script>
+        // Captura os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get('sucesso')) {
+        const msgDiv = document.getElementById('mensagem');
+        msgDiv.textContent = "Animal cadastrado com sucesso!";
+        msgDiv.classList.add("mensagem");
+        }
+    </script>
+
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/modais.js"></script>
+    <script src="/js/selectArquivo.js"></script>
+    <script src="/js/funcoes/dashOng/cadastrarAnimais.js"></script>
+    <script src="/js/funcoes/dashOng/mostrarAnimais.js"></script>
+</body>
+
+</html>

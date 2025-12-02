@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Dashboard ADM</title>
+    <link rel="stylesheet" href="/css/dashOng2.css">
+    <link rel="stylesheet" href="/css/menuDash2.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="stylesheet" href="/css/perfils.css">
+    <link rel="stylesheet" href="/css/animais.css">
+    <link rel="stylesheet" href="/css/aprovação.css">
+    <link rel="stylesheet" href="/css/perfilAdm.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/css/filtro.css">
+    <link rel="stylesheet" href="/css/admDash.css">
+    <link rel="stylesheet" href="/css/cadastrarAdm.css">
+    <link rel="stylesheet" href="/css/graficosDash.css">
+    <link rel="stylesheet" href="/css/tabelaAdms.css">
+
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <!-- para o icon do menu -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="containerDashOng">
+        <div class="navbarOng recolhido">
+            
+            <div class="btn-abrir">
+              <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+            </div>
+
+            <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+          
+            <br>
+
+            <div class="linksOng ativo" id="ativo">
+                <img src="/imgs/dash.png" alt="">
+                <li>Dashboard</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/publicidadeOng.png" alt="">
+                <li>ADM</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/animaisMenu.png" alt="">
+                <li>Animais</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/usuarios.png" alt="">
+                <li>Perfils</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/check.png" alt="">
+                <li>Aprovação</li>
+            </div>
+
+            <div class="linksOng">
+                <img src="/imgs/userOng.png" alt="">
+                <li>Perfil</li>
+            </div>
+
+        </div>
+
+        <div class="dash">
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="conteudo ativo">
+                <h1 class="tituloDash">Dashboard</h1>
+                <div class="containerGraficos">
+
+  <!-- Linha 1 -->
+  <div class="row">
+    <div class="box box1">
+      <div class="cardGrafico">
+        <div class="titleGraficos">Crescimento da Plataforma</div>
+        <canvas 
+            class="grafico"
+            data-type="multi-line"
+            data-labels="Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez">
+        </canvas>
+
+      </div>
+    </div>
+
+    <div class="box box2">
+      <div class="cardGrafico">
+        <div class="titleGraficos">Cadastros</div>
+        <canvas class="grafico"
+          data-type="doughnut"
+          data-labels="Cães,Gatos,Outros">
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha 2 -->
+  <div class="row">
+
+    <div class="box box3">
+      <div class="cardGrafico">
+        <div class="titleGraficos">Animais Cadastrados</div>
+        <canvas
+          class="grafico"
+          data-type="line"
+          data-labels="Cães, Gatos, Outros"
+        ></canvas>
+      </div> 
+    </div>
+
+     <div class="box box4">
+      <div class="cardGrafico">
+        <div class="titleGraficos">ONGs Cadastradas</div>
+        <canvas
+          class="grafico"
+          data-type="bar"
+          data-labels="ONGs"
+        ></canvas>
+      </div>
+    </div>
+
+    <div class="box box5">
+      <div class="cardGrafico">
+        <div class="titleGraficos">Campanhas</div>
+        <canvas
+          class="grafico"
+          data-type="bar"
+          data-labels="Doação de ração,Adoção coletiva,Vacinação,Eventos"
+        ></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Linha 3 -->
+  <div class="row">
+    <div class="box box6">
+      <div class="cardGrafico">
+        <div class="titleGraficos">Engajamento</div>
+        <canvas
+          class="grafico"
+          data-type="line"
+          data-labels="Curtidas,Comentários,Compartilhamentos,Cliques,Novos seguidores"
+          data-values="90,70,60,80,75"
+        ></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+                <div class="colunasDash">
+                    <div class="coluna1">
+                        <h1 class="tituloDash">Gráfico de engajamento</h1>
+                        <div class="graficoEngajamento"> <canvas id="meuGrafico"></canvas></div> <br>
+                        <!-- 
+                        <div class="vagas">
+                            <h1 class="tituloDash">Vagas</h1>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Voluntário para Feirinha de Adoção</b></h2>
+                                    <h3><b>Tipo: </b> Voluntariado | Eventos</h3>
+                                    <h3><b>Local: </b> Presencial - São Paulo/SP</h3>
+                                    <h3><b>Descrição: </b> Auxilie na organização de feirinhas de adoção aos finais de
+                                        semana</h3>
+                                </div>n  
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>8</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Assistente Administrativo</b></h2>
+                                    <h3><b>Tipo: </b> Emprego | Administrativo</h3>
+                                    <h3><b>Local: </b> Remoto</h3>
+                                    <h3><b>Descrição: </b> Ajude no controle de cadastros de pets e relatórios
+                                        financeiros
+                                        da ONG.</h3>
+                                </div>
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>10</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <div class="cardVagas">
+                                <div class="ladoA">
+                                    <h2 class="subtituloDash"><b>Estágio em Auxílio Veterinário</b></h2>
+                                    <h3><b>Tipo: </b> Estágio | Cuidados com Animais</h3>
+                                    <h3><b>Local: </b> Presencial - São Paulo/SP</h3>
+                                    <h3><b>Descrição: </b> Apoie os veterinários no atendimento básico e vacinação de
+                                        pets.
+                                    </h3>
+                                </div>
+                                <div class="ladoB">
+                                    <div class="cardStatus">Ativo</div>
+                                    <div class="inscricao">
+                                        <h2 class="subtituloDash"><b>12</b></h2>
+                                        <h3><b>Inscritos</b></h3>
+                                    </div>
+                                </div>
+                            </div> <br>
+                        </div> 
+                        -->
+                    </div>
+                    
+                    <div class="coluna2"> <!-- Seguidores -->
+                        <h1 class="tituloDash">Número de cadastrados</h1>
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Usuários</b> </p>
+                            </div>
+                            <div> <span class="numero" id="userData"></span></div>
+                        </div>
+
+                        <!-- Ongs -->
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Ongs</b> </p>
+                            </div>
+                            <div> <span class="numero" id="ongData"></span></div>
+                        </div>
+
+                        <!-- Animais -->
+
+                        <div class="card seguidores">
+                            <div>
+                                <p> <b>Animais</b></p>
+                            </div>
+                            <div> <span class="numero" id="animaisData"></span></div>
+                        </div>
+
+
+                        <!-- <div class="card post"> <img src="/imgs/vacinacao.png" alt="Post">
+                        <div class="info">
+                            <p class="titulo">Post mais curtido</p>
+                            <p class="descricao">Dia de vacinação Pet</p>
+                        </div>
+                    </div>  Funcionários -->
+                        <!-- <div class="card funcionarios">
+                        <h3>Funcionários</h3>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user1.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Luana Souza</p>
+                                    <p>Designer</p>
+                                    <p>Admissão: 12/02/2023</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox" checked> <span class="slider"></span> </label> </div>
+                        </div>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user2.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Rodrigo Santiago</p>
+                                    <p>Desenvolvedor</p>
+                                    <p>Admissão: 05/08/2022</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox"> <span class="slider"></span> </label> </div>
+                        </div>
+                        <div class="funcionario">
+                            <div class="perfil"> <img src="/imgs/user3.jpeg" alt="Foto">
+                                <div class="dados">
+                                    <p class="nome">Manuela Costa</p>
+                                    <p>Marketing</p>
+                                    <p>Admissão: 20/11/2021</p>
+                                </div>
+                            </div>
+                            <div class="acoes"> <button title="Ver currículo">📄</button> <label class="switch"> <input
+                                        type="checkbox" checked> <span class="slider"></span> </label> </div>
+                        </div>
+                    </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CADASTRAR ADM -->
+            <div id="modalCadastro" class="conteudo">
+                <div class="modal-content">
+                    <div class="caixaCadastrarAdm">
+                        <h2>Cadastrar novos administradores</h2>
+                        <button id="abrirModal" class="btn-cadastrarAdm">+ Cadastrar ADM</button>
+                    </div>
+                    <form action="/cadastrarAdm" method="post" id="formPublicidade">
+                        <label for="titulo">Nome</label>
+                        <input type="text" name="nome" id="titulo" required>
+
+                        <label for="imagem">E-mail</label>
+                        <input type="email" name="email" id="email"  required>
+
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="password" required>
+                        <input type="hidden" name="tipo" value="Normal">
+
+                        <div class="botoes">
+                            <button type="button" class="btn btn-cancelar" id="fecharModal">Cancelar</button>
+                            <button type="submit" class="btn btn-salvar">Concluído</button>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="tabelaAdms">
+                        <h3>Administradores cadastrados</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Tipo</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaAdminsBody">
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+
+            <!-- ANIMAIS -->
+            <div id="animais" class="conteudo">
+                <h1 class="tituloDash">Animais cadastrados</h1>
+                <div class="card filtros animais">
+                    <div class="tituloVisivel">
+                        <h3>Filtros</h3>
+                        <h1>+</h1>
+                    </div>
+                    <div class="filters">
+                        <div>
+                        <label>Nome</label>
+                        <input id="filtro-nome" type="text" placeholder="Digite o nome..." />
+                        </div>
+
+                        <div>
+                        <label>Espécie</label>
+                        <select id="filtro-especie">
+                            <option>— Todas —</option>
+                            <option>Cachorro</option>
+                            <option>Gato</option>
+                        </select>
+                        </div>
+
+                        <div>
+                        <label>Ordenar por</label>
+                        <select id="filtro-ordenar">
+                            <option>Nome (A-Z)</option>
+                            <option>Nome (Z-A)</option>
+                            <option>Mais recentes</option>
+                            <option>Mais antigos</option>
+                        </select>
+                        </div>
+
+                        <div>
+                        <label>De</label>
+                        <input id="filtro-de" type="date" />
+                        </div>
+
+                        <div>
+                        <label>Até</label>
+                        <input id="filtro-ate" type="date" />
+                        </div>
+                    </div>
+
+                    
+
+                    <button class="btn-clear" id="filtro-clear">Limpar filtros</button>
+                </div>
+
+                <div class="animalsCaixa">
+                    <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal4.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Caramelinho</p>
+                                <p>Cachorro</p>
+                                <p>Ong: Arca Brasil</p>
+                                <p>Data do resgate: 12/12/2024</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal1.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Matheo</p>
+                                <p>Esquilo</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/02/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal2.jpg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Thonio</p>
+                                <p>Furão</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/05/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="card animais">
+                    <div class="animal">
+                        <div class="perfil"> <img src="/imgs/userAnimal3.jpeg" alt="Foto">
+                            <div class="dados">
+                                <p class="nome">Luke</p>
+                                <p>Cachorro</p>
+                                <p>Ong: Patinhas felizes</p>
+                                <p>Data do resgate: 12/02/2025</p>
+                                <div class="cardStatus" id="paraAdocao">Para adoção</div>
+                            </div>
+                        </div>
+                        <div class="acoes-animais">
+                            <!-- Botão Deletar -->
+                            <button title="Deletar" class="btn-delete">
+                                <img src="/imgs/delete.png" alt="Deletar">
+                            </button>
+
+                            <!-- Botão Aprovar -->
+                            <button title="Aprovar" class="btn-approve">
+                                <img src="/imgs/check.png" alt="Aprovar">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+                
+
+            </div>
+
+            <!-- PERFIS -->
+            <div id="perfils" class="conteudo">
+                <div class="colunaPerfis">
+
+                    <!-- ONGs -->
+                    <div class="colunaPerfil" id="perfilOng">
+                        <h1 class="tituloDash">Perfis das ONGs</h1>
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>ONG Patinhas Felizes</b></h2>
+                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <!--<h3><b>Área: </b> Resgate e Adoção</h3>-->
+                                <h3><b>Descrição: </b> Atende animais resgatados em situação de rua e promove
+                                    adoções.
+                                </h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>35</b></h2>
+                                    <h3><b>Animais</b></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usuários -->
+                    <div class="colunaPerfil" id="perfilUsuario">
+                        <h1 class="tituloDash">Perfis dos Usuários</h1>
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash" id="nomeUser"><b>Maria Oliveira</b></h2>
+                                <h3><b>Email: </b> <span id="emailUser"> maria@email.com</span></h3>
+                                <h3><b>Local: </b> <span id="localUser"> São Paulo/SP</span></h3>
+                                <h3><b>Descrição: </b> Interessada em adoção de cães de pequeno porte.</h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus">Ativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>3</b></h2>
+                                    <h3><b>Adoções</b></h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cardVagas">
+                            <div class="ladoA">
+                                <h2 class="subtituloDash"><b>Matheus Sebastian</b></h2>
+                                <h3><b>Email: </b> sebastian@email.com</h3>
+                                <h3><b>Local: </b> São Paulo/SP</h3>
+                                <h3><b>Descrição: </b> Interessado em adoção de cães e gatos de pequeno porte.</h3>
+                            </div>
+                            <div class="ladoB">
+                                <div class="cardStatus" id="inativo">Inativo</div>
+                                <div class="inscricao">
+                                    <h2 class="subtituloDash"><b>1</b></h2>
+                                    <h3><b>Adoções</b></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- APROVAÇÃO -->
+            <div id="aprovação" class="conteudo">
+                <h1 class="tituloDash">Solicitação das ONGs</h1>
+                <div class="card filtros ong">
+                    <div class="tituloVisivel">
+                        <h3>Filtros</h3>
+                        <h1>+</h1>
+                    </div>
+                    <div class="filters">
+                        <div>
+                        <label>Nome</label>
+                        <input class="filtro-nome" type="text" placeholder="Digite o nome..." />
+                        </div>
+
+                        <div>
+                        <label>Email</label>
+                        <input class="filtro-email" type="text" placeholder="Digite o email..." />
+                        </div>
+
+                        <div>
+                        <label>CEP</label>
+                        <input class="filtro-cnpj" type="text" placeholder="Digite o CEP..." />
+                        </div>
+
+                        <!--
+                        <div>
+                        <label>CNPJ</label>
+                        <input class="filtro-cnpj" type="text" placeholder="Digite o CNPJ..." />
+                        </div>
+                        -->
+                        <div>
+                        <label>Ordenar por</label>
+                        <select class="filtro-ordenar">
+                            <option>Nome (A-Z)</option>
+                            <option>Nome (Z-A)</option>
+                            <option>Mais recentes</option>
+                            <option>Mais antigos</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    
+
+                    <button class="btn-clear filtro-clear">Limpar filtros</button>
+                </div>
+                <div class="ongsCaixa"></div>
+            </div>
+
+            <!-- Adm Perfil -->
+            <div id="perfil" class="conteudo">
+                <h1 class="tituloDash">Perfil ADM</h1>
+                                
+                <div class="card">
+
+                <div>
+                    <div class="profile-header">
+                    <img class="fot" src="/imgs/perfilAdm/fotoPerfilUsuario.png" alt="">
+                    <div class="info-profile">
+                        <p><strong>Outlier</strong></p>
+                        <p class="email-admin">outlier2025@gmail.com</p>
+                    </div>
+                    <button class="editFoto-btn">Editar foto</button>
+                    </div>
+
+                    <form>
+                    <label for="nome">Nome</label>
+                    <input class="nome-caixa" type="text" id="nome" value="Outlier">
+
+                    <label for="email">Email</label>
+                    <input class="email-caixa" type="email" id="email" value="outlier2025@gmail.com">
+
+                    <label for="senha">Senha</label>
+                    <input class="senha-caixa" type="text" id="senha" placeholder="••••••">
+
+                    <button class="save-btn">SALVAR</button>
+                    </form>
+
+                </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="popUp" id="overlay">
+        <div class="containerPopUp">
+            <button class="btnFechar" id="btnFechar">X</button>
+            <p>Alterações Salvas</p>
+        </div>
+    </div>
+
+    <script src="/js/menuDash2.js"></script>
+
+    <!-- Funcões -->
+    <script src="/js/funcoes/dashAdm/contagemDash.js"></script>
+    <script src="/js/funcoes/dashAdm/graficoLinha.js"></script>
+    <script src="/js/funcoes/dashAdm/dashAdmPerfis.js"></script>
+    <script src="/js/funcoes/dashAdm/aprovacaoOng.js"></script> 
+    <script src="/js/funcoes/dashAdm/animaisAprovacao.js"></script> 
+    <script src="/js/funcoes/dashAdm/perfilAdm.js"></script>
+    <script src="/js/funcoes/dashAdm/animaisFiltro.js"></script> 
+    <script src="/js/funcoes/dashAdm/tabelaAdm.js"></script>
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/botaoCancelAdm.js"></script>
+</body>
+
+</html>

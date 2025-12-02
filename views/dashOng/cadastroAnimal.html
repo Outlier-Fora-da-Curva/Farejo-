@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Animais</title>
+    <link rel="stylesheet" href="/css/dashOng.css">
+
+    <link rel="stylesheet" href="/css/cadastroAnimais.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+    </div>
+ 
+
+    <!-- Funcionalidades -->
+    <div class="containerAnimaisCadastro">
+
+        <div class="funcAnimais">
+
+         <!-- Formulário -->
+            <form action="/cadastrarAnimal" method="POST" enctype="multipart/form-data" class="conteudo-modal">
+                <div class="lado-esquerdo">
+
+                    <img src="/imgs/userPet.png" alt="Prévia" class="img-preview" id="previewAnimal1">
+                    <label class="btn-upload">
+                        + Adicionar imagem
+                        <input type="file" name="foto" hidden id="inputImagemAnimal1">
+                    </label>
+                </div>
+
+                <div class="lado-direito">
+                    <div class="grade-form">
+                        <label>Nome:
+                            <input type="text" name="nome">
+                        </label>
+
+                        <label>Raça:
+                            <input type="text" name="raca">
+                        </label>
+
+                        <label>Sexo:
+                            <select name="sexo">
+                                <option>Macho</option>
+                                <option>Fêmea</option>
+                            </select>
+                        </label>
+
+                        <label>Idade:
+                            <input type="text" name="idade">
+                        </label>
+
+                        <label>Tipo:
+                            <select name="tipo">
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                                <option>Outros</option>
+                            </select>
+                        </label>
+
+                        <label>Porte:
+                            <select name="porte">
+                                <option>Pequeno</option>
+                                <option>Médio</option>
+                                <option>Grande</option>
+                            </select>
+                        </label>
+
+                        <label>Castrado:
+                            <select name="castrado">
+                                <option>Sim</option>
+                                <option>Não</option>
+                            </select>
+                        </label>
+
+                        <label>Animal:
+                            <select name="animal">
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                            </select>
+                        </label>
+                        
+                        <label>Vacinado:
+                            <select name="vacinado">
+                                <option>Sim</option>
+                                <option>Não</option>
+                            </select>
+                        </label>
+
+                        <label class="historia-label">História do animal:
+                            <input type="text" name="historia">
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Botões DENTRO do form -->
+                <div class="rodape-form">
+                    <button type="submit" class="btn-confirmar">CADASTRAR</button>
+                    <a href="/animaisOng"><button type="button" class="btn-cancelar">CANCELAR</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/modais.js"></script>
+    <script src="/js/selectArquivo.js"></script>
+    <script src="/js/funcoes/dashOng/cadastrarAnimais.js"></script>
+</body>
+
+</html>

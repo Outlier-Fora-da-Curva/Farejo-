@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farejo - Perfil ONG</title>
+  <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/localizacaoOng.css">
+  <link rel="stylesheet" href="/css/menuDash.css">
+  
+</head>
+<body>
+
+  <div class="containerPerfilOng">
+      
+    <!-- Navbar Lateral -->
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+            
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+    </div>
+
+  <div class="overlay" id="overlay">
+    <div class="modal">
+
+      <h2>Editar Perfil da ONG</h2>
+
+      <form id="editForm">
+        <label>Nome da ONG</label>
+        <input type="text" id="edit-nome" name="nomeOng" />
+
+        <label class="btn-upload">Trocar foto de Perfil</label>
+        <div class="foto-perfil-container">
+          <input type="file" name="imagem" id="inputImagemOng">
+          <img src="" alt="Prévia da foto" class="img-preview" id="previewFotoPerfilOng">
+        </div>
+
+        <label>Email</label>
+        <input type="email" id="edit-email" name="email" />
+
+        <label>Telefone</label>
+        <input type="text" id="edit-telefone" name="telefoneContato" />
+
+        <label>CNPJ</label>
+        <input type="text" id="edit-cnpj" name="cnpj">
+
+        <label>Descrição</label>
+        <textarea id="edit-descricao" name="descricao"></textarea>
+
+        <label>CEP</label>
+        <input type="text" id="edit-cep" name="cep">  
+
+        <div class="row">
+          <div class="col">
+            <label>Rua</label>
+            <input type="text" id="edit-rua" name="rua" />
+          </div>
+          <div class="col">
+            <label>Número</label>
+            <input type="text" id="edit-numero" name="numero" />
+          </div>
+          <div class="col">
+            <label>Complemento</label>
+            <input type="text" id="edit-complemento" name="complemento" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Bairro</label>
+            <input type="text" id="edit-bairro" name="bairro" />
+          </div>
+          <div class="col">
+            <label>Cidade</label>
+            <input type="text" id="edit-cidade" name="cidade" />
+          </div>
+          <div class="col">
+            <label>Estado</label>
+            <input type="text" id="edit-estado" name="uf" />
+          </div>
+        </div>
+        <br>
+        <input type="submit" class="save-btn" value="SALVAR" />
+      </form>
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+  <!-- buscar cep -->
+
+  <script>
+    document.getElementById("edit-cep").addEventListener("blur", function() {
+      let cep = this.value.replace(/\D/g, ""); // só números
+
+      if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => response.json())
+          .then(data => {
+            if (!data.erro) {
+              document.getElementById("edit-rua").value = data.logradouro;
+              document.getElementById("edit-bairro").value = data.bairro;
+              document.getElementById("edit-cidade").value = data.localidade;
+              document.getElementById("edit-estado").value = data.uf;
+              document.getElementById("edit-complemento").value = data.complemento;
+            } else {
+              alert("CEP não encontrado!");
+            }
+          })
+          .catch(() => alert("Erro ao buscar o CEP."));
+      } else {
+        alert("CEP inválido. Digite 8 números.");
+      }
+    });
+  </script>
+
+
+<!-- Importa a biblioteca IMask -->
+<script src="https://unpkg.com/imask"></script>
+
+<!-- filtro dos campos de cep e cnpj -->
+<script>
+  const inputTelefone = document.getElementById('edit-telefone');
+  IMask(inputTelefone, {
+      mask: [
+      { mask: '(00) 0000-0000' },   // Telefone fixo
+      { mask: '(00) 00000-0000' }   // Celular
+      ],
+      dispatch: function (appended, dynamicMasked) {
+      const number = (dynamicMasked.value + appended).replace(/\D/g, '');
+      return dynamicMasked.compiledMasks[number.length > 10 ? 1 : 0];
+      }
+  });
+
+  // === CNPJ ===
+  const inputCNPJ = document.getElementById("edit-cnpj");
+  if (inputCNPJ) {
+  IMask(inputCNPJ, {
+      mask: "00.000.000/0000-00"
+  });
+  }
+
+  // === CEP ===
+  const inputCEP = document.getElementById("edit-cep");
+  if (inputCEP) {
+  IMask(inputCEP, {
+      mask: "00000-000"
+  });
+  }
+</script>
+
+<script src="/js/menuDash.js"></script>
+<script src="/js/funcoes/dashOng/editarPerfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Publicações</title>
+    <link rel="stylesheet" href="/css/dashOng.css">
+    <link rel="stylesheet" href="/css/publicacoesEeventos.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+
+<body>
+    <!-- Menu -->
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+            
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+    </div>
+
+    <div class="container9">
+
+      <button id="btnTrocar" onclick="alternarTelas()" class="btnTrocarTela">
+          Ver publicações
+      </button>
+
+
+        <div class="containerCadastrar containerCadastrarPublicacoes">
+
+          <div class="formCadastro">
+
+            <form action="/cadastrarPublicacao" method="POST" enctype="multipart/form-data">
+              
+              <h2>Cadastrar Publicação</h2>
+
+                <img src="" alt="Imagem" class="img-preview" id="img-preview">
+                <label class="btnAdicionarImagem">
+                    + Adicionar imagem
+                    <input type="file" name="img" id="inputImagem">
+                </label>
+
+                <div class="grade-form">
+                    
+                    <label>Título:
+                        <input type="text" name="titulo">
+                    </label>
+
+                    <label>Descrição:
+                        <textarea name="descricao" rows="4"></textarea>
+                    </label>
+
+                </div>
+
+
+                <!-- Botões DENTRO do form -->
+                <div class="rodape-form">
+                    <button type="submit" class="btn-confirmar">CADASTRAR</button>
+                    <a href="/publicacoes"><button type="button" class="btn-cancelar">CANCELAR</button></a>
+                </div>
+            </form>
+
+          </div>
+
+        </div>
+
+        <div class="containerExibir containerExibirPublicacoes" id="mostrarPublicacoes">
+
+        </div>
+
+    </div>
+
+  <script>
+    function alternarTelas() {
+      const form = document.querySelector(".containerCadastrarPublicacoes");
+      const exibicao = document.querySelector(".containerExibirPublicacoes");
+      const btn = document.getElementById("btnTrocar");
+
+      const mostrandoFormulario = form.classList.contains("visivel");
+
+      if (mostrandoFormulario) {
+          // OCULTA formulário
+          form.classList.remove("visivel");
+          form.classList.add("oculto");
+
+          // MOSTRA publicações
+          exibicao.classList.remove("oculto");
+          exibicao.classList.add("visivel");
+
+          // MUDA TEXTO DO BOTÃO
+          btn.textContent = "Cadastrar publicação";
+      } else {
+          // MOSTRA formulário
+          form.classList.remove("oculto");
+          form.classList.add("visivel");
+
+          // OCULTA publicações
+          exibicao.classList.remove("visivel");
+          exibicao.classList.add("oculto");
+
+          // MUDA TEXTO DO BOTÃO
+          btn.textContent = "Ver publicações";
+      }
+    }
+
+    window.onload = () => {
+        document.querySelector(".containerCadastrarPublicacoes").classList.add("oculto");
+        document.querySelector(".containerExibirPublicacoes").classList.add("visivel");
+        document.getElementById("btnTrocar").textContent = "Cadastrar publicação";
+    };
+
+
+  </script>
+
+
+<script>
+document.getElementById("inputImagem").addEventListener("change", function () {
+    const file = this.files[0];
+    const preview = document.getElementById("img-preview");
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = "block"; // caso a imagem esteja escondida
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+
+
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/funcoes/dashOng/cadastrarPubli.js"></script>
+    <script src="/js/funcoes/dashOng/mostrarPubli.js"></script>
+</body>
+
+</html>

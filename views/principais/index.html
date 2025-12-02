@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farejo - Home</title>
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="/css/landingPage/style.css">
+    <link rel="stylesheet" href="/css/landingPage/responsividade.css">
+    <link rel="stylesheet" href="/css/landingPage/footer.css">
+    <link rel="stylesheet" href="/css/landingPage/comentarios.css">
+    <link rel="stylesheet" href="/css/landingPage/cuidados.css">
+    <link rel="stylesheet" href="/css/landingPage/hospitais.css">
+    <link rel="stylesheet" href="/css/landingPage/eventos.css">
+    <link rel="stylesheet" href="/css/landingPage/pets.css">
+    <link rel="stylesheet" href="/css/landingPage/impactos.css">
+    <link rel="stylesheet" href="/css/landingPage/objetivos.css">
+    <link rel="stylesheet" href="/css/landingPage/botoesIniciais.css">
+    <link rel="stylesheet" href="/css/landingPage/banner.css">
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+
+    
+  <!-- Navbar -->
+  <!-- Menu -->
+    <header>
+        <img src="/imgs/logoFarejo.png" alt="Logo Farejo" class="logo">
+
+        <nav>
+            <a href="/inicial">Início</a>
+            <a href="/feed">Feed</a>
+            <a href="/cuidadosPets">Cuidados</a>
+            <!-- <a href="#agenda">Agenda</a> -->
+            <!-- <a href="#contato">Contato</a> -->
+        </nav>
+
+        <a href="/login" class="btnLogin"></a>
+
+        <!-- Botão Menu Hamburguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+  </header>
+
+  <!-- Banner -->
+  <section id="inicio" class="banner">
+    <div id="mensagemLogin"></div>
+    <h1>Em busca de um <br> melhor amigo?</h1>
+    <p>ENTÃO VOCÊ ESTÁ NO LUGAR CERTO</p>
+  </section>
+
+  <!-- Botões Iniciais -->
+  <div class="botoesIniciais">
+    <a href="/cadastroUsuario" class="botaoInicial">Quero adotar</a>
+    <a href="/cadastroOng" class="botaoInicial">Cadastrar minha ONG</a>
+  </div>
+
+
+  
+
+  <!-- Missão, Visão e Valores -->
+  <section class="secaoObjetivo">
+    <div class="cardsObjetivos">
+      <div class="cardObjetivo">
+        <h3>Nossa Missão</h3>
+        <p>Promover a conexão entre animais que aguardam um lar e pessoas dispostas a oferecer amor, cuidado e uma nova chance. Nossa missão é incentivar a adoção responsável, reduzindo o abandono e fortalecendo a consciência sobre o bem-estar animal. Acreditamos que cada adoção transforma não só a vida do animal, mas também a de quem o acolhe.</p>
+      </div>
+      <div class="cardObjetivo">
+        <img src="/imgs/landingPage/imgObjetivos.png" >
+      </div>
+      <div class="cardObjetivo">
+        <h3>Nossa Visão</h3>
+        <p>Unir tecnologia, empatia e responsabilidade social para construir um futuro onde nenhum animal precise viver nas ruas ou em abrigos por falta de visibilidade. Queremos inspirar uma sociedade mais humana, onde a adoção seja sempre vista como um gesto de amor e transformação.</p>
+      </div>
+      <div class="cardObjetivo">
+        <h3>Nossos Valores</h3>
+        <p>Nossos valores se baseiam no respeito à vida, na compaixão e na responsabilidade com cada ser que cruzar nosso caminho. Valorizamos a transparência em todas as etapas da adoção, a colaboração entre pessoas e instituições e o uso da tecnologia como ferramenta para o bem. Acreditamos que, juntos, podemos transformar a empatia em ação e criar um mundo mais justo para todos os animais.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- Impactos-->
+  <section class="secaoImpactos">
+  <h2 class="tituloImpacto">Nossos impactos</h2>
+  <p class="subtituloImpacto">Juntos, já transformamos muitas histórias!</p>
+  
+  <div class="cardsImpactos">
+      <div class="cardImpacto">
+      <div class="icon-numero">
+          <img src="./imgs/Pets.png" alt="Animais cadastrados">
+          <p class="numeroImpacto" id="nAnimais">0</p>
+      </div>
+      <span>Animais cadastrados</span>
+      </div>
+  
+      <div class="cardImpacto">
+      <div class="icon-numero">
+          <img src="./imgs/High Five.png" alt="ONGs parceiras">
+          <p class="numeroImpacto" id="nOngs">0</p>
+      </div>
+      <span>ONGs parceiras</span>
+      </div>
+  
+      <div class="cardImpacto">
+      <div class="icon-numero">
+          <img src="./imgs/Users.png" alt="Pessoas conectadas">
+          <p class="numeroImpacto" id="nUser">0</p>
+      </div>
+      <span>Pessoas conectadas</span>
+      </div>
+  </div>
+  </section>
+
+<br><br><br><br><br>
+
+<section class="secaoPets">
+    <h2>Conheça alguns de nossos amiguinhos <br> que estão farejando um lar:</h2>
+
+    <div class="containerAnimais" id="containerAnimais">
+                          
+      
+    </div>
+</section>
+
+<br><br><br><br><br>
+
+<!-- Secao Eventos -->
+<section class="secaoEventos">
+  <h1>Agenda de Eventos</h1>
+
+  <div class="divEventos">
+    <div class="eventoDestaque" id="eventoDestaque"></div>
+ 
+    <div class="eventos" id="listaEventos"></div>
+  </div>
+</section>
+
+<!--
+<section class="secaoHospitais">
+  <h2>Encontre hospitais e clínicas parceiras perto de você.</h2>
+
+  <div class="conteudoHospitais">
+
+    Lado esquerdo: busca e lista 
+    <div class="buscaHospitais">
+      <label for="cep" class="label">Insira seu Cep para conferir os hospitais mais próximos de você:</label>
+      <input type="text" id="cep" placeholder="EX: 08451-270">
+
+      Card de hospital 
+      <div class="cardHospital">
+        <h3>Hospital Veterinário Saúde - Clínica Pet - Pronto Socorro 24 horas</h3>
+        <p><i class="fa fa-map-marker"></i> R. Nossa Sra. da Saúde, 366 - Jardim Previdência, São Paulo - SP, 04159-000</p>
+        <p><strong>Distância:</strong> 2.4 km</p>
+        <p><strong>⭐ 5.0</strong></p>
+        <a href="#">Mais detalhes</a>
+      </div>
+
+      <div class="cardHospital">
+        <h3>Hospital Veterinário Saúde - Clínica Pet - Pronto Socorro 24 horas</h3>
+        <p><i class="fa fa-map-marker"></i> R. Nossa Sra. da Saúde, 366 - Jardim Previdência, São Paulo - SP, 04159-000</p>
+        <p><strong>Distância:</strong> 6.2 km</p>
+        <p><strong>⭐ 5.0</strong></p>
+        <a href="#">Mais detalhes</a>
+      </div>
+
+    </div>
+
+     Lado direito: mapa 
+    <div class="mapaHospitais">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.723348408438!2d-46.63330968445746!3d-23.5810739684358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c13a6a4e7f%3A0x8e2e6e6ffb01759!2sHospital%20Veterin%C3%A1rio%20Sa%C3%BAde!5e0!3m2!1spt-BR!2sbr!4v1692970421234!5m2!1spt-BR!2sbr" 
+        width="100%" height="350" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<br><br>
+-->
+
+
+<!-- Secao Cuidados -->
+<section class="secaoCuidados">
+  <h1>CUIDADOS COM O SEU PET</h1>
+
+  <div class="cardsCuidados">
+
+    <div class="card">
+      <h2>Dúvidas sobre quais <br> alimentos oferecer?</h2>
+      <p>Algumas comidas comuns para nós humanos<br>
+        oferecem grandes riscos para o seu pet.</p>
+      <a href="/alimentacaoSaudavel"><button class="btnCard">Ler mais</button></a>
+      <img src="/imgs/landingPage/cachorro2.png" alt="Cachorro dálmata">
+    </div>
+
+    <div class="card">
+      <h2>Preparando a casa <br> para o novo pet?</h2>
+      <p>Antes de adotar, saiba como adaptar o ambiente <br>
+        para receber seu amigo com segurança.</p>
+      <button class="btnCard">Ler mais</button>
+      <img src="/imgs/landingPage/cachorro1.png" alt="Cachorro fofo">
+    </div>
+
+  </div>
+</section>
+
+
+<br><br>
+<!-- Comentarios -->
+<!-- <section class="secaoComentarios">
+  <div class="textoDepo">
+    <h2>Confira alguns <br> depoimentos de <br> quem usou o Farejo</h2>
+  </div>
+
+  <div class="carrossel">
+    <div class="slides">
+      
+      <div class="slide ativo">
+        <div class="perfil">
+          <img src="/imgs/landingPage/fotoUsuario.png" alt="Usuário 1">
+          <div>
+            <h3>Usuário 1</h3>
+            <p class="estrela">5.0 ★★★★★</p>
+          </div>
+        </div>
+        <p class="comentario">
+          Encontrei meu melhor amigo pelo Farejo! Site incrível. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <div class="slide">
+        <div class="perfil">
+          <img src="/imgs/landingPage/user.png" alt="Usuário 2">
+          <div>
+            <h3>Usuário 2</h3>
+            <p class="estrela">4.5 ★★★★☆</p>
+          </div>
+        </div>
+        <p class="comentario">
+          Processo de adoção super rápido e seguro. Recomendo muito!
+        </p>
+      </div>
+
+      <div class="slide">
+        <div class="perfil">
+          <img src="/imgs/landingPage/user.png" alt="Usuário 3">
+          <div>
+            <h3>Usuário 3</h3>
+            <p class="estrela">5.0 ★★★★★</p>
+          </div>
+        </div>
+        <p class="comentario">
+          Atendimento excelente das ONGs cadastradas. Experiência incrível!
+        </p>
+      </div>
+    </div>
+
+
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+
+    <div class="indicadores">
+      <span class="dot ativo"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section> -->
+
+
+<br><br>
+
+
+<footer class="footer">
+  <div class="footerContainer">
+
+    <!-- LOGO -->
+    <div class="footerLogo">
+      <img src="/imgs/landingPage/logoFarejo.png" alt="Logo Farejo">
+      
+    </div>
+
+    <!-- LINKS RÁPIDOS -->
+    <div class="footerLinks">
+      <h3>› LINKS RÁPIDOS</h3>
+      <ul>
+        <li><a href="http://localhost:3000/inicial">Início</a></li>
+        <li><a href="http://localhost:3000/">Agenda</a></li>
+        <li><a href="http://localhost:3000/cuidadosPets">Cuidados</a></li>
+        <li><a href="http://localhost:3000/loginOng">Perfil ONG</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTATO -->
+    <div class="footerContato">
+      <h3>› CONTATO</h3>
+      <p>📍 Rua Igarapé Água Azul, 70 – SP</p>
+      <p>✉ farejo@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footerCopy">
+    <hr>
+    <p>2025 Farejo</p>
+  </div>
+</footer>
+
+</body>
+<script src="/js/landingPage.js"></script>
+<script src="/js/funcoes/agenda.js"></script>
+<script src="/js/funcoes/cardsAnimais.js"></script>
+<script src="/js/funcoes/impactosContagem.js"></script>
+
+<script>
+  // Faz requisição para o backend para pegar o nome da sessão
+  fetch('/session')
+    .then(res => res.json())         // transforma a resposta em JSON
+    .then(data => {
+      if (data.nome) {               // se o usuário estiver logado
+        document.getElementById('mensagemLogin').innerText =
+          `Seja bem-vindo(a), ${data.nome}!`;
+      }
+    })
+    .catch(err => console.error(err));
+</script>
+</html>

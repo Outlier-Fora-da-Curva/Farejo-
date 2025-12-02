@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Farejo - Dashboard ONG</title>
+    <link rel="stylesheet" href="/css/dashOng.css">
+    <link rel="stylesheet" href="/css/dashOngResp.css">
+    <link rel="stylesheet" href="/css/menuDash.css">
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <div class="containerDashOng dashOngInicio">
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/feed/chat.png" alt="" class="iconFiltro">
+            <li><a href="/chatOng">Chat</a></li>
+        </div>
+
+    </div>
+
+
+        <div class="dash">
+            
+
+            <div class="coluna1">
+
+                <h1 class="tituloDash">Dashboard ONG</h1>
+                <br>
+
+                <div class="graficosOngAnimais"><canvas id="graficosOngAnimais"></canvas></div>
+                <br>
+                <br>
+                <br>
+
+                <div class="graficosOngEventos"><canvas id="graficosOngEventos"></canvas></div>
+                <br>
+
+            </div>
+
+            <div class="coluna2">
+
+                <div class="auxCol2">
+
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Total de animais</b>
+                        <div>
+                            <span class="numero" id="qTotalAnimais">0</span>
+                        </div>
+                    
+                    </div>
+
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Animais disponíveis</b>
+                        <div>
+                            <span class="numero" id="qAnimaisDisponiveis">0</span>
+                        </div>
+                    
+                    </div>
+
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Animais adotados</b>
+                        <div>
+                            <span class="numero" id="qAnimaisAdotados">0</span>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Número total de eventos</b>
+                        <div>
+                            <span class="numero" id="qTotalEventos">0</span>
+                        </div>
+                    
+                    </div>
+
+                    <div class="card2" id="numPost">
+                        <b class="titulo">Número total de postagens</b>
+                        <div>
+                            <span class="numero" id="qTotalPostagens">0</span>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/menuDash.js"></script>
+    <script src="/js/dashOng.js"></script>
+    <script src="/js/funcoes/dashOng/contagemNumeros.js"></script>
+
+    <script src="/js/funcoes/dashOng/graficoAnimaisOng.js"></script>
+    <script src="/js/funcoes/dashOng/graficoEventos.js"></script>
+    
+    
+</body>
+</html>

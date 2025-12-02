@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+    <title>Farejo - Chat via ONG</title>
+
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/chatOng.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body data-id="{{idOng}}">
+
+    <div class="containerChatOng">
+
+        <div class="ladoA">
+            <h2 class="tituloA">Conversas</h2>
+
+            <div class="pesquisa">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" id="inputPesquisa" placeholder="Buscar cliente...">
+            </div>
+
+
+            <ul id="clientes"></ul>
+
+            <br><br>
+            <button class="voltar">
+                <a href="/dashOng">Voltar</a>
+            </button>
+        </div>
+
+        <div class="ladoB">
+            <section class="escolha">
+                <h2 class="textoEsc">Escolha um usuário para iniciar o bate-papo!</h2>
+            </section>
+
+            <div class="containerChat">
+                <section class="navbar" id="navbarOng">
+                    <div class="grupoEsquerda">
+                        <a href="/chatOng" class="voltar2">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </a>
+
+                        <div class="infosSender">
+                            <img src="" alt="" class="imgSender" id="imgSender">
+                            <h2 class="nomeSender" id="nomeSender"></h2>
+                        </div>
+                    </div>
+
+                    <!--<div class="acessibilidade">
+                        <button class="aumentar">A+</button>
+                        <button class="diminuir">A-</button>
+                    </div>-->
+                    
+                </section>
+
+                <section id="chat" class="mensagens"></section>
+            </div>
+
+            <form class="chatForm" id="msg1">
+                <input type="text" id="msg" class="chatInput" placeholder="Digite uma mensagem..." required />
+
+                <button type="submit" class="btnChat">
+                    <span class="material-symbols-outlined"> send </span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- <script>
+        const url = new URL(window.location.href);
+        const idCliente = url.pathname.split("/").pop();
+
+        console.log("ID do cliente:", idCliente);
+    </script> -->
+
+    <!-- Funções -->
+     
+    <script src="/js/funcoes/chat/colunaContatos.js"></script>
+    <script src="/js/funcoes/chat/chatOng.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farejo - Editar Animal</title>
+  <link rel="shortcut icon" href="/imgs/logoFocinho.png" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/cadastroAnimais.css">
+  <link rel="stylesheet" href="/css/menuDash.css">
+  
+</head>
+<body>
+
+  <div class="containerPerfilOng">
+      
+    <!-- Navbar Lateral -->
+    <div class="navbarOng recolhido">
+        <div class="btn-abrir">
+            <span class="material-symbols-outlined" id="btn-abrir">menu</span>
+        </div>
+
+        <img id="logoMenu" src="/imgs/logoFocinho.png" alt="" class="logo">
+        <br>
+        <div class="linksOng ">
+            <img src="/imgs/dash.png" alt="">
+            <li><a href="/dashOng">Dashboard</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/animaisMenu.png" alt="">
+            <li><a href="/animaisOng">Animais</a></li>
+        </div>
+
+        <div class="linksOng">
+            <img src="/imgs/publicidadeOng.png" alt="">
+            <li><a href="/publicacoes">Publicações</a></li>
+        </div>
+
+        <!-- <div class="linksOng">
+            <img src="/imgs/postagens.png" alt="">
+            <li><a href="/eventosOng">Eventos</a></li>
+        </div> -->
+
+        <div class="linksOng">
+            <img src="/imgs/userOng.png" alt="">
+            <li><a href="/perfilOng">Perfil</a></li>
+        </div>
+
+    </div>
+
+    <div class="containerAnimaisCadastro containerEditarAnimal">
+
+        <div class="funcAnimais">
+
+         <!-- Formulário -->
+            <form action="/editarAnimal" method="POST" enctype="multipart/form-data" class="conteudo-modal formEditarAnimal" id="formEditarAnimal">
+                <div class="lado-esquerdo">
+
+                    <img src="/imgs/userPet.png" alt="Prévia" class="img-preview" id="previewAnimal">
+                    <label class="btn-upload">
+                        + Trocar imagem
+                        <input type="file" name="foto" hidden id="inputImagemAnimal">
+                    </label>
+                </div>
+
+                <div class="lado-direito">
+                    <div class="grade-form">
+                        <label>Nome:
+                            <input type="text" name="nome" id="nome">
+                        </label>
+
+                        <label>Raça:
+                            <input type="text" name="raca" id="raca">
+                        </label>
+
+                        <label>Sexo:
+                            <select name="sexo" id="sexo">
+                                <option>Macho</option>
+                                <option>Fêmea</option>
+                            </select>
+                        </label>
+
+                        <label>Idade:
+                            <input type="text" name="idade" id="idade">
+                        </label>
+
+                        <label>Tipo:
+                            <select name="tipo" id="tipo">
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                                <option>Outros</option>
+                            </select>
+                        </label>
+
+                        <label>Porte:
+                            <select name="porte" id="porte">
+                                <option>Pequeno</option>
+                                <option>Médio</option>
+                                <option>Grande</option>
+                            </select>
+                        </label>
+
+                        <label>Castrado:
+                            <select name="castrado" id="castrado">
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
+                        </label>
+                        
+                        <label>Vacinado:
+                            <select name="vacinado" id="vacinado">
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
+                        </label>
+
+                        <label>História do animal:
+                            <input type="text" name="historia" id="historia">
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Botões DENTRO do form -->
+                <div class="rodape-form">
+                    <button type="submit" class="btn-confirmar">EDITAR</button>
+                    <a href="/animaisOng"><button type="button" class="btn-cancelar">CANCELAR</button></a>
+                    <button type="button" class="btn-excluir" id="btnExcluir">EXCLUIR ANIMAL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+  </div>
+
+
+<script src="/js/menuDash.js"></script>
+<script src="/js/funcoes/dashOng/editarAnimal.js"></script>
+</body>
+</html>
